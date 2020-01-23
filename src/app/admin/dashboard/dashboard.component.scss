@@ -1,0 +1,68 @@
+$top-menu-height: 90px;
+$top-menu-background: #fff;
+$top-menu-color: #777;
+
+$left-menu-width: 300px;
+$left-menu-background: #01152f;
+
+.logo {
+  height: 91px;
+  width: $left-menu-width;
+  background-color: #1370e8;
+  text-align: center;
+}
+
+.side-nav {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: $left-menu-background;
+  z-index: 2;
+  display: none;
+}
+
+@media screen and (min-width: 600px) {
+  .header {
+    background-color: $top-menu-background;
+    z-index: 1;
+    box-shadow: 1px 1px 7px #ccc;
+  }
+  .side-nav {
+    display: block;
+    width: $left-menu-width;
+    z-index: 3;
+  }
+}
+
+.side-nav.visible {
+  display: block;
+}
+
+.header {
+  position: absolute;
+  width: 100%;
+  z-index: 3;
+  height: $top-menu-height;
+  background-color: #fff;
+  // border-bottom: 3px solid #2d3d51;
+}
+
+.main-content {
+  padding: 40px;
+  margin-top: 0;
+  padding: 0;
+  padding-top: $top-menu-height;
+  height: 100%;
+}
+
+.rl {
+  text-align: right;
+  vertical-align: middle;
+  padding: 35px;
+}
+
+.pi {
+  font-size: 1.5em !important;
+  color: $top-menu-color;
+  cursor: pointer;
+}
