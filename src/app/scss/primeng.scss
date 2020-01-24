@@ -1,0 +1,92 @@
+@import "./util.scss";
+
+@mixin bg-menu {
+  background-color: $top-menu-background !important;
+  color: $left-menu-color !important;
+  border: unset !important;
+}
+
+@mixin bg-menu-active {
+  background-color: $top-menu-background-active !important;
+  color: $left-menu-color !important;
+  border: unset !important;
+}
+
+.ui-panelmenu .ui-panelmenu-header > a,
+.ui-panelmenu-content,
+.ui-panelmenu-content .ui-menuitem .ui-menuitem-link {
+  @include bg-menu;
+}
+
+.ui-panelmenu .ui-panelmenu-header.ui-state-active > a {
+  background-color: $top-menu-background-active !important;
+}
+
+.ui-panelmenu-content .ui-menuitem .ui-menuitem-link:hover {
+  @include bg-menu-active;
+}
+
+.ui-panelmenu .ui-menuitem > a {
+  padding-left: 42px !important;
+}
+
+.ui-panelmenu .ui-menuitem:hover > a {
+  color: $left-menu-color !important;
+}
+
+.ui-panelmenu .ui-panelmenu-header > a .ui-panelmenu-icon {
+  color: $left-menu-color !important;
+}
+
+.ui-panelmenu .ui-panelmenu-header > a .ui-panelmenu-icon:hover {
+  color: $left-menu-color !important;
+}
+
+.ui-panelmenu .ui-panelmenu-content .ui-menuitem .ui-menuitem-link {
+  font-weight: 700px !important;
+}
+
+// .ui-panelmenu-panel:hover {
+//   @include bg-menu-active;
+// }
+// .ui-panelmenu-header:hover {
+//   @include bg-menu-active;
+// }
+// .ui-panelmenu-header-link:hover {
+//   @include bg-menu-active;
+// }
+// .ui-widget :hover {
+//   @include bg-menu-active;
+// }
+// .ui-panelmenu-header :hover {
+//   @include bg-menu-active;
+// }
+// .ui-state-default:hover {
+//   @include bg-menu-active;
+// }
+
+.ui-panelmenu-content:hover {
+  span {
+    color: #ffffff !important;
+  }
+  @include bg-menu-active;
+}
+
+.ui-panelmenu-content {
+  font-weight: 700px !important;
+  color: #ffffff !important;
+}
+
+.ui-panelmenu .ui-panelmenu-header:not(.ui-state-active) > a:hover {
+  @include bg-menu-active;
+}
+
+input {
+  border-radius: 20px;
+  border-style: solid;
+  border-width: 0.5px;
+  // border-color: $top-menu-color;#e8e8e8
+  border-color: #e8e8e8;
+  padding: 10px;
+  height: 40px;
+}

@@ -1,28 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
-$top-menu-height: 90px;
-$left-menu-width: 300px;
-$top-menu-background: #01152f;
-$top-menu-background-active: #002452;
+@import './app/scss/theme-font';
+@import './app/scss/util.scss';
+@import './app/scss/primeng.scss';
+
+* {
+  font-family: $theme-font-family;
+  outline: none;
+}
+
+.ui-menuitem-text {
+  font-family: $theme-font-family !important;
+}
 
 body {
   margin: 0px;
+  font-family: $theme-font-family;
   //   line-height: 1;
 }
 
-// PRIMNG
-
-.ui-panelmenu .ui-panelmenu-header > a,.ui-panelmenu-content,.ui-panelmenu-content .ui-menuitem .ui-menuitem-link {
-  background-color: $top-menu-background !important;
-  color: #fff !important;
-  border: unset !important;
-}
-
-// .ui-panelmenu .ui-panelmenu-header.ui-state-active > a {
-//   background-color: $top-menu-background-active !important;
-// }
-
-.ui-panelmenu-content .ui-menuitem .ui-menuitem-link:hover {
-  background-color: $top-menu-background-active !important;
-  color: #fff !important;
-  border: unset !important;
+.input-search {
+  background-color: #f1f1f1;
+  width: 100%;
 }

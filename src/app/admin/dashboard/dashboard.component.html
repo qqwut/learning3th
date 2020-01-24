@@ -1,21 +1,61 @@
 <div class="main">
     <div class="header">
-        <div class="rl">
-            <span style="padding-right: 30px;"><i class="pi pi-bell"></i></span>
-            <span><i class="pi pi-user"></i></span>
+        <div class="ui-g">
+            <div class="ui-g-2 ui-lg-9 ui-md-6 ui-xs-6">
+                <div class="menu-left">
+                    <span (click)="clickMenu($event)"><i class="pi pi-align-justify"></i></span>
+                </div>
+            </div>
+            <div class="ui-g-10 ui-lg-3 ui-md-6 ui-xs-6 hi">
+                <div class="ui-g-8">
+                    <div class="menu-user"><b>Register | Sign In</b></div>
+                </div>
+                <div class="ui-g-4">
+                    <div class="img-circle">
+                        <span><i class="pi pi-user"></i></span>
+                    </div>
+                </div>
+            </div>
+            <div class="ui-g w-screen-search"><input type="text" class="input-search" placeholder="Search..."></div>
+            <div class="ui-g w-screen">
+                <div class="menu-list" style="width:100%;text-align: center;padding:0px;">
+                    <div class="ui-g-3" style="padding:0px;">
+                        <div class="menu-ac"><span class="menu-li">&nbsp;บทความ</span></div>
+                    </div>
+                    <div class="ui-g-3" style="padding:0px;">
+                        <div class="menu-ac"><span class="menu-li">&nbsp;Q&A</span></div>
+                    </div>
+                    <div class="ui-g-3" style="padding:0px;">
+                        <div class="menu-ac"><span class="menu-li">&nbsp;ข่าวสาร</span></div>
+                    </div>
+                    <div class="ui-g-3" style="padding:0px;">
+                        <div class="menu-ac"><span class="menu-li">&nbsp;กิจกรรม</span></div>
+                    </div>
+                </div>
+            </div>
         </div>
+        <!-- <div class="rl"> -->
+        <!-- <span style="padding-right: 30px;"><i class="pi pi-bell"></i></span> -->
+        <!-- <div class="ui-g">
+                <div class="ui-g-12 ui-lg-8 ui-md-4">1</div>
+                <div class="ui-g-12 ui-lg-4 ui-md-4">
+                    <div class="img-circle">
+                        <span><i class="pi pi-user"></i></span>
+                    </div>
+                </div>
+            </div> -->
+        <!-- </div> -->
         <a href="#" class="nav-trigger"><span></span></a>
     </div>
     <div class="side-nav">
         <div class="logo">
-            logo
+            <h1 style="margin-top: 0px;padding-top: 19px;color: #FFF;">Learnning3thai</h1>
+            <hr>
         </div>
         <div class="menu-left">
-            <!-- <p-panelMenu [model]="items" [style]="{'width':'300px'}"></p-panelMenu> -->
             <app-menu></app-menu>
         </div>
     </div>
     <div class="main-content">
     </div>
 </div>
-<!-- <app-menu></app-menu> -->

@@ -129,5 +129,10 @@
       }
     }
   },
-  "defaultProject": "learnning3th"
+  "defaultProject": "learnning3th",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }
