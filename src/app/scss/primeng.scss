@@ -4,30 +4,44 @@
   background-color: $top-menu-background !important;
   color: $left-menu-color !important;
   border: unset !important;
+  @extend .bd-radius;
 }
 
 @mixin bg-menu-active {
   background-color: $top-menu-background-active !important;
-  color: $left-menu-color !important;
+  // @include gradient-menu-bg;
+  color: $text-menu-active !important;
   border: unset !important;
 }
 
-.ui-panelmenu .ui-panelmenu-header > a,
-.ui-panelmenu-content,
-.ui-panelmenu-content .ui-menuitem .ui-menuitem-link {
+// .bd-radius {
+//   @extend .bd-radius;
+// }
+
+// .ui-menuitem:active {
+//   background: #FFCC00 !important;
+// }
+
+.ui-panelmenu .ui-menuitem-icon {
+  margin-right: 2.25em !important;
+}
+
+.ui-panelmenu .ui-panelmenu-header {
+  padding: 5px !important;
+}
+
+.ui-panelmenu-header > a {
   @include bg-menu;
 }
 
-.ui-panelmenu .ui-panelmenu-header.ui-state-active > a {
-  background-color: $top-menu-background-active !important;
-}
-
-.ui-panelmenu-content .ui-menuitem .ui-menuitem-link:hover {
+.ui-panelmenu-header > .ui-state-active {
+  // background-color: #e6b706 !important;
   @include bg-menu-active;
+  @extend .bd-radius;
 }
 
-.ui-panelmenu .ui-menuitem > a {
-  padding-left: 42px !important;
+.ui-panelmenu .ui-panelmenu-header > a {
+  padding: 18px 10px 18px 30px !important;
 }
 
 .ui-panelmenu .ui-menuitem:hover > a {
@@ -39,54 +53,406 @@
 }
 
 .ui-panelmenu .ui-panelmenu-header > a .ui-panelmenu-icon:hover {
-  color: $left-menu-color !important;
+  color: $text-menu-active !important;
+}
+.ui-panelmenu .ui-panelmenu-content .ui-menuitem {
+  border-radius: 0px !important;
 }
 
 .ui-panelmenu .ui-panelmenu-content .ui-menuitem .ui-menuitem-link {
   font-weight: 700px !important;
+  background-color: $main-color2 !important;
+  color: $left-menu-color !important;
 }
 
-// .ui-panelmenu-panel:hover {
-//   @include bg-menu-active;
-// }
-// .ui-panelmenu-header:hover {
-//   @include bg-menu-active;
-// }
-// .ui-panelmenu-header-link:hover {
-//   @include bg-menu-active;
-// }
-// .ui-widget :hover {
-//   @include bg-menu-active;
-// }
-// .ui-panelmenu-header :hover {
-//   @include bg-menu-active;
-// }
-// .ui-state-default:hover {
-//   @include bg-menu-active;
-// }
-
+.ui-panelmenu .ui-panelmenu-content > .ui-panelmenu-root-submenu > .ui-submenu-list {
+  background-color: $main-color2 !important;
+  border-radius: 0px !important;
+  margin: -1px !important;
+}
 .ui-panelmenu-content:hover {
-  span {
-    color: #ffffff !important;
-  }
+  // span {
+  //   color: $text-menu-active !important;
+  // }
   @include bg-menu-active;
+  li {
+    color: $text-menu-active !important;
+  }
+}
+
+.ui-panelmenu .ui-menuitem-text:hover {
+  color: $text-menu-active !important;
 }
 
 .ui-panelmenu-content {
   font-weight: 700px !important;
-  color: #ffffff !important;
+  color: $text-menu-active !important;
 }
 
 .ui-panelmenu .ui-panelmenu-header:not(.ui-state-active) > a:hover {
   @include bg-menu-active;
+  @extend .bd-radius;
+}
+
+.ui-corner-all > li {
+  border-radius: 10px !important;
+}
+
+// .ui-menu .ui-menuitem-link .ui-menuitem-text:hover,
+// .ui-menubar .ui-menuitem-link .ui-menuitem-text:hover,
+// .ui-tieredmenu .ui-menuitem-link .ui-menuitem-text:hover,
+// .ui-contextmenu .ui-menuitem-link .ui-menuitem-text:hover,
+// .ui-megamenu .ui-menuitem-link .ui-menuitem-text:hover,
+// .ui-slidemenu .ui-menuitem-link .ui-menuitem-text:hover {
+//   @include bg-menu-active;
+//   color: #fff !important;
+// }
+
+// .ui-corner-all > a:hover {
+//   @include bg-menu-active;
+// }
+
+// .ui-corner-all > a > span:hover {
+//   @include bg-menu-active;
+// }
+
+// .ui-corner-all > li > a:hover {
+//   @include bg-menu-active;
+//   color: #fff !important;
+// }
+
+input {
+  @extend .bd-radius;
+  border-style: solid;
+  border-width: 1px;
+  border-color: $border-color !important;
+  padding: 10px 10px 10px 17px;
+  height: $input-height;
+  float: center;
+}
+
+::placeholder {
+  // font-style: italic;
+  color: $disable !important;
+}
+
+textarea {
+  @extend .bd-radius;
+  border-style: solid;
+  border-width: 1px;
+  border-color: $border-color !important;
+  padding: 10px 10px 10px 17px;
+  height: 135px;
+}
+
+.ui-dropdown {
+  font-size: $theme-font-form-size !important;
+  text-align: left;
+  padding: 0px 0px 0px 10px !important;
+  min-width: unset !important;
+  // display: block !important;
+  height: $input-height !important;
+  width: 90%;
+}
+
+.ui-calendar {
+  // padding: 0px 0px 0px 10px !important;
+  // text-align: left;
+  // display: block !important;
+  min-width: unset !important;
+  width: 100% !important;
+
+  .ui-inputtext {
+    //   text-align: left;
+    //   padding: 5px 0px 5px 17px !important;
+    //   height: $input-height;
+    // width: 100% !important;
+    // padding: 0px 0px 0px 10px !important;
+    // font-size: $theme-font-form-size;
+    min-width: unset !important;
+    padding-left: 17px;
+    border-color: $border-color !important;
+    border-right: solid $border-color !important;
+    border-right-width: 1px !important;
+    background-color: unset !important;
+    width: 80%;
+  }
+
+  // .ui-inputtext:last-child {
+  //   border-right: none;
+  // }
+}
+
+.ui-inputtext {
+  background-color: unset !important;
+}
+
+.ui-datepicker table td.ui-datepicker-today > a.ui-state-active,
+body .ui-datepicker table td.ui-datepicker-today > span.ui-state-active {
+  background-color: $main-color !important;
+}
+.ui-datepicker table td > a.ui-state-active {
+  background-color: $main-color !important;
+}
+
+.ui-datepicker .ui-datepicker-header .ui-datepicker-title select {
+  margin-top: 0 !important;
+}
+// body .ui-calendar.ui-calendar-w-btn .ui-inputtext
+
+.ui-datepicker .ui-datepicker-buttonbar {
+  border-top: 0 none !important;
+  padding: 0px;
+}
+
+.ui-button.ui-button-text-only .ui-button-text {
+  padding: 0px !important;
+  height: 34px;
+  width: 60px;
+}
+
+.ui-datepicker .ui-datepicker-header .ui-datepicker-title select {
+  option {
+    padding: 0px !important;
+  }
+  // height: 25px;
+  padding: 0px;
+}
+
+.ui-datepicker table th {
+  padding: 0px !important;
+}
+
+.ui-widget,
+.ui-widget * {
+  @extend .bd-radius;
+}
+
+.ui-dropdown .ui-dropdown-trigger .ui-dropdown-trigger-icon {
+  margin-left: -0.7em !important;
+  font-size: $theme-font-form-size;
+}
+
+.ui-radiobutton .ui-radiobutton-box.ui-state-active {
+  border-color: $main-color !important;
+  background-color: $main-color !important;
+  // outline: none !important;
+}
+// .ui-inputtext:enabled:focus:not(.ui-state-error) {
+//   padding: 0px 0px 0px 10px !important;
+//   min-width: unset !important;
+// }
+
+.ui-calendar.ui-calendar-w-btn .ui-datepicker-trigger.ui-button {
+  position: absolute;
+  margin-left: -40px;
+  border: unset;
+  background-color: transparent;
+  text-align: center;
+}
+
+.ui-steps .ui-steps-item.ui-state-highlight .ui-steps-number {
+  background-color: $main-color !important;
+  padding: 2px !important;
+}
+
+.ui-steps .ui-steps-item {
+  width: 30%;
+}
+
+.ui-steps.steps-custom {
+  margin-bottom: 30px;
+}
+
+.ui-steps.steps-custom .ui-steps-item .ui-menuitem-link {
+  padding: 0 1em;
+  overflow: visible;
+}
+
+// .ui-steps.steps-custom .ui-steps-item .ui-steps-number {
+//   background-color: #0081c2;
+//   color: #FFFFFF;
+//   display: inline-block;
+//   width: 36px;
+//   border-radius: 50%;
+//   margin-top: -14px;
+//   margin-bottom: 10px;
+// }
+
+.ui-steps.steps-custom .ui-steps-item .ui-steps-title {
+  color: #555555;
+}
+
+// DROPDOWN
+.ui-corner-all {
+  @extend .bd-radius;
+}
+
+.ui-dropdown .ui-dropdown-trigger {
+  @extend .bd-radius;
+  background-color: unset !important;
+}
+
+.ui-dropdown-panel .ui-dropdown-items .ui-dropdown-item {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  height: $input-height;
+  padding: 0px 5px 5px 15px !important;
+}
+
+.ui-dropdown-panel .ui-dropdown-items .ui-dropdown-item.ui-state-highlight {
+  @include bg-menu-active;
+}
+
+// CHECKBOX
+.ui-chkbox .ui-chkbox-box {
+  border-radius: 5px !important;
+  outline: none !important;
+}
+
+.ui-chkbox .ui-chkbox-box.ui-state-active {
+  background-color: $main-color !important;
+  outline: none !important;
+  border: none !important;
+}
+
+.pi {
+  color: $text-color-all;
+  font-size: 1.25em !important;
+}
+
+.ui-chkbox .ui-chkbox-icon {
+  color: $text-menu-active !important;
+  outline: none !important;
+}
+
+// UPLOAD FILE
+label.myLabel input[type="file"] {
+  position: absolute;
+  top: -1000px;
+  display: none;
 }
 
 input {
-  border-radius: 20px;
+  background-color: #fff;
+}
+
+input[type="text"]:disabled {
+  // background-color: #FFF !important;
+  background: unset !important;
+  color: -internal-light-dark-color(rgb(84, 84, 84), rgb(170, 170, 170));
+  cursor: default;
+  background-color: -internal-light-dark-color(rgb(235, 235, 228), rgb(45, 45, 45));
+}
+
+.myLabel {
+  @extend .bd-radius;
+  padding: 2px 5px;
+  margin: 2px;
+  background: $main-color;
+  display: inline-block;
+  padding: 8px 20px;
+  font-size: 20px;
+  color: $text-menu-active;
+}
+
+.myLabel:hover {
+  background: $main-color;
+}
+
+.myLabel:active {
+  background: $main-color;
+}
+
+.ui-dialog {
+  width: 30%;
+  min-height: 200px;
+  margin-left: 12% !important;
+  background-color: #fff !important;
+  @include shadows;
+
+  .ui-dialog-titlebar {
+    border: unset !important;
+    background-color: unset !important;
+  }
+  .ui-dialog-content {
+    border: unset !important;
+  }
+}
+
+.main-content {
+  margin-top: 150px;
+  position: absolute;
+  width: calc(100% - #{$left-menu-width});
+  margin-left: $left-menu-width !important;
+}
+
+.img-content {
+  width: $card-m-width;
+  margin-top: -48px;
+  position: absolute;
+  margin-left: calc(calc(#{$card-width}/ 20) - calc(#{$card-m-width+25px}/ 2));
   border-style: solid;
-  border-width: 0.5px;
-  // border-color: $top-menu-color;#e8e8e8
-  border-color: #e8e8e8;
+  border-color: #fff;
+  border-width: 1px;
+  border-radius: 50%;
+}
+
+.card {
+  @include shadows;
+  width: $card-width;
+  border-radius: 20px;
+}
+
+.card .title {
+  background-color: $card-bg-title-color;
+  border-top-left-radius: $card-border-radius;
+  border-top-right-radius: $card-border-radius;
+  height: $card-height;
+  padding: 55px 20px 20px 20px;
+  color: $card-title-color;
+  text-align: center;
+}
+
+.card .title button {
+  position: absolute;
+  background-color: #fff;
+  color: #333;
+  border-radius: 20px;
+  height: 25px;
+  border-style: unset;
+  cursor: pointer;
+  padding-top: 0px;
+}
+
+.card .title .like {
+  margin-left: calc(calc(#{$card-width}/ 2) - calc(220px));
+}
+
+.card .body {
+  background-color: $card-bg-body-color;
+  color: $card-body-color;
+  border-style: solid;
+  border-color: $main-color-text3;
+  border-width: 1px;
+  border-bottom-left-radius: $card-border-radius;
+  border-bottom-right-radius: $card-border-radius;
+  height: $card-height;
   padding: 10px;
-  height: 40px;
+  text-align: left;
+}
+
+.card .body button {
+  position: absolute;
+  background-color: $card-bg-title-color;
+  color: #FFF;
+  border-radius: 20px;
+  height: 25px;
+  border-style: unset;
+  cursor: pointer;
+  padding-top: 0px;
+}
+
+.card .body .like {
+  margin-left: calc(calc(#{$card-width}/ 2) - calc(61px));
 }

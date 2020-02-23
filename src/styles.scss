@@ -1,7 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
-@import './app/scss/theme-font';
-@import './app/scss/util.scss';
-@import './app/scss/primeng.scss';
+@import "./app/scss/theme-font";
+@import "./app/scss/util.scss";
+@import "./app/scss/primeng.scss";
+@import "./app/scss/responsive.scss";
 
 * {
   font-family: $theme-font-family;
@@ -22,3 +23,11 @@ body {
   background-color: #f1f1f1;
   width: 100%;
 }
+
+// .main-content {
+//   padding-left: $left-menu-width + 20px !important;
+// }
+
+// .side-nav {
+//   margin: -8px;
+// }

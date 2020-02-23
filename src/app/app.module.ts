@@ -4,8 +4,12 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
-import { CheckboxModule } from 'primeng/checkbox';
+import { NavigationItem } from './share/menu/navigation';
+import { AuthenticationService } from "./service/authentication/authentication.service";
+import { httpServices } from "./service/http.service";
 
 @NgModule({
   declarations: [
@@ -15,9 +19,15 @@ import { CheckboxModule } from 'primeng/checkbox';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    CheckboxModule
+    ReactiveFormsModule,
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [
+    NavigationItem,
+    httpServices,
+    AuthenticationService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

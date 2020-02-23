@@ -2,17 +2,21 @@
     <div class="header">
         <div class="ui-g">
             <div class="ui-g-2 ui-lg-9 ui-md-6 ui-xs-6">
-                <div class="menu-left">
+                <div class="menu-phone">
                     <span (click)="clickMenu($event)"><i class="pi pi-align-justify"></i></span>
+                </div>
+                <div class="menu-logo">
+                    <!-- <img src="/assets/images/logo_recruitment.png" class="image-logo" alt=""> -->
                 </div>
             </div>
             <div class="ui-g-10 ui-lg-3 ui-md-6 ui-xs-6 hi">
-                <div class="ui-g-8">
-                    <div class="menu-user"><b>Register | Sign In</b></div>
+                <div class="ui-g-8 pd-top">
+                    <!-- <div class="menu-user"><b>Register | Sign In</b></div> -->
                 </div>
-                <div class="ui-g-4">
+                <div class="ui-g-4 pd-top">
                     <div class="img-circle">
-                        <span><i class="pi pi-user"></i></span>
+                        <p-menu #menu [popup]="true" [model]="items"></p-menu>
+                        <span (click)="menu.toggle($event)" style="padding: 2px;"><i class="pi pi-user"></i></span>
                     </div>
                 </div>
             </div>
@@ -34,28 +38,20 @@
                 </div>
             </div>
         </div>
-        <!-- <div class="rl"> -->
-        <!-- <span style="padding-right: 30px;"><i class="pi pi-bell"></i></span> -->
-        <!-- <div class="ui-g">
-                <div class="ui-g-12 ui-lg-8 ui-md-4">1</div>
-                <div class="ui-g-12 ui-lg-4 ui-md-4">
-                    <div class="img-circle">
-                        <span><i class="pi pi-user"></i></span>
-                    </div>
-                </div>
-            </div> -->
-        <!-- </div> -->
         <a href="#" class="nav-trigger"><span></span></a>
     </div>
-    <div class="side-nav">
-        <div class="logo">
-            <h1 style="margin-top: 0px;padding-top: 19px;color: #FFF;">Learnning3thai</h1>
-            <hr>
+    <div class="ui-g">
+        <div class="side-nav">
+            <div class="logo">
+                <h1 style="margin-top: 0px;padding-top: 19px;color: #FFF;">Learnning3thai</h1>
+                <hr>
+            </div>
+            <div class="menu-left">
+                <app-menu></app-menu>
+            </div>
         </div>
-        <div class="menu-left">
-            <app-menu></app-menu>
+        <div class="main-content" style="position:absolute;">
+            <router-outlet></router-outlet>
         </div>
-    </div>
-    <div class="main-content">
     </div>
 </div>

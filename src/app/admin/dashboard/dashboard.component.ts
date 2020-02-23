@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthenticationService } from "./../../service/authentication/authentication.service";
+import { Router } from '@angular/router';
+import { MenuItem } from 'primeng/api';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,10 +10,24 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class DashboardComponent implements OnInit {
-
-  constructor() { }
+  items: MenuItem[];
+  currentUser: any;
+  constructor(
+    private router: Router,
+    private authenticationService: AuthenticationService
+  ) { }
 
   ngOnInit() {
+    this.items = [
+      { label: 'View', icon: '' },
+      { label: 'Edit', icon: '' },
+      {
+        label: 'Sign Out', routerLink: ['/login'],
+        // command: (event: any) => {
+        // }
+      }
+    ];
+    this.currentUser = this.authenticationService.currentUserValue;
   }
 
   clickMenu(event) {

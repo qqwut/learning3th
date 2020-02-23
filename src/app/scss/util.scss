@@ -1,13 +1,128 @@
-$text-color-all: #fff;
-$theme-font-family: "Opun";
-// $main-color: #ffcc00;
-$main-color: #01152f;
+$main-color: #004b9f;
+$main-color2: #0066d8;
+$main-color3: #fcbaba;
+$main-color4: #f8d4d4;
+$main-color5: #ebebeb;
 
-$top-menu-color: #777;
+$main-color-text1: #555;
+$main-color-text2: #fff;
+$main-color-text3: #cccccc;
+$main-color-text4: #858585;
+
+$text-black: $main-color-text3;
+$text-white: #fff;
+$shadow-color1: rgba(44, 51, 73, 0.1);
+$shadow-color2: #888888;
+
+$text-color-all: $main-color-text3;
+$text-color-all-soft: $shadow-color2;
+$text-color-black: $main-color-text1;
+$theme-font-family: "Opun";
+$theme-font-form-size: 14px;
+
+$top-menu-color: $main-color-text1;
 $top-menu-height: 120px;
 $top-menu-background: $main-color;
-$top-menu-background-active: #002452;
+$top-menu-background-active: $main-color;
 
-$left-menu-color: $text-color-all;
-$left-menu-width: 300px;
+$left-menu-color: $main-color-text3;
+$left-menu-width: 280px;
 $left-menu-background: $main-color;
+
+$background: $main-color;
+$disable: $shadow-color2;
+$border-color: $shadow-color2;
+$input-height: 32px;
+
+// BTN
+$btn-defult: $main-color-text4;
+$btn-pimary: $main-color;
+
+// Defining values
+$screen-pc: 1500px;
+$screen-pc-sm: 1200px;
+$screen-ipad: 1025px;
+$screen-phone: 768px;
+$screen-phone-sm: 500px;
+
+$bd-radius: 15px;
+$pc-height: 40px;
+$mb-height: 30px;
+
+$text-menu: $main-color-text1;
+$text-menu-active: $text-white;
+
+$gradient-color1: $main-color;
+$gradient-color2: $main-color3;
+$gradient-color3: $text-white;
+$menu-title-main-color: $main-color-text1;
+$text-title: $main-color-text1;
+$text-content: $main-color-text3;
+
+$card-bg-title-color: $main-color;
+$card-bg-body-color: $text-white;
+$card-title-color: $text-white;
+$card-body-color: $main-color-text1;
+$card-border-radius: $bd-radius;
+$card-height: 160px;
+$card-width: 310px;
+$card-m-width: 100px;
+
+@mixin shadows {
+  // -webkit-box-shadow: 4px 4px 6px 1px $shadow-color1;
+  // -moz-box-shadow: 4px 4px 6px 1px $shadow-color1;
+  // box-shadow: 4px 4px 6px 1px $shadow-color1;
+  border-radius: 20px;
+  border: 0 solid transparent;
+  -webkit-box-shadow: 4px 4px 1rem 0 $shadow-color1;
+  box-shadow: 4px 4px 1rem 0 $shadow-color1;
+}
+
+@mixin gradient-bg-login {
+  // text-align:center;vertical-align : middle; display : table-cell;
+  background-image: -webkit-gradient(linear, left top, left bottom, from($gradient-color1), to($gradient-color2));
+  background-image: -webkit-linear-gradient($gradient-color1, $gradient-color2);
+  background-image: -moz-linear-gradient($gradient-color1, $gradient-color2);
+  background-image: -ms-linear-gradient($gradient-color1, $gradient-color2);
+  background-image: -o-linear-gradient($gradient-color1, $gradient-color2);
+  background-image: linear-gradient($gradient-color1, $gradient-color2);
+  box-shadow: 5px 10px $shadow-color2;
+}
+
+@mixin gradient-bg {
+  background-color: $main-color5;
+  // text-align:center;vertical-align : middle; display : table-cell;
+  // background-image: -webkit-gradient(linear, left top, left bottom, from($gradient-color1), to($gradient-color2));
+  // background-image: -webkit-linear-gradient($gradient-color1, $gradient-color2);
+  // background-image: -moz-linear-gradient($gradient-color1, $gradient-color2);
+  // background-image: -ms-linear-gradient($gradient-color1, $gradient-color2);
+  // background-image: -o-linear-gradient($gradient-color1, $gradient-color2);
+  // background-image: linear-gradient($gradient-color1, $gradient-color2);
+  // box-shadow: 5px 10px $shadow-color2;
+}
+
+@mixin gradient-menu-bg {
+  background-color: $main-color !important;
+  // background: -moz-linear-gradient(90deg, $gradient-color1, $gradient-color2 100%);
+  // background: -webkit-linear-gradient(90deg, $gradient-color1, $gradient-color2 100%);
+  // background: linear-gradient(90deg, $gradient-color1, $gradient-color2 100%);
+  // filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=$gradient-color1,endColorstr=$gradient-color2,GradientType=1);
+}
+
+@mixin gradient-header-bg {
+  background: $main-color5;
+  // background: -moz-linear-gradient(90deg, $gradient-color3, $gradient-color1 100%);
+  // background: -webkit-linear-gradient(90deg, $gradient-color3, $gradient-color1 100%);
+  // background: linear-gradient(90deg, $gradient-color3, $gradient-color1 100%);
+  // filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=$gradient-color3,endColorstr=$gradient-color1,GradientType=1);
+}
+
+@mixin shadows-btn {
+  -webkit-box-shadow: 0px 0px 4px 0px $shadow-color1;
+  -moz-box-shadow: 0px 0px 4px 0px $shadow-color1;
+  box-shadow: 0px 0px 4px 0px $shadow-color1;
+}
+
+.bd-radius {
+  border-radius: $bd-radius !important;
+}
