@@ -405,7 +405,8 @@ input[type="text"]:disabled {
 }
 
 .card .title {
-  background-color: $card-bg-title-color;
+  @include card-bg;
+  // background-color: $card-bg-title-color;
   border-top-left-radius: $card-border-radius;
   border-top-right-radius: $card-border-radius;
   height: $card-height;

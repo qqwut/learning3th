@@ -1,4 +1,4 @@
-$main-color: #004b9f;
+$main-color: #3b3b3b;
 $main-color2: #0066d8;
 $main-color3: #fcbaba;
 $main-color4: #f8d4d4;
@@ -79,7 +79,6 @@ $card-m-width: 100px;
 }
 
 @mixin gradient-bg-login {
-  // text-align:center;vertical-align : middle; display : table-cell;
   background-image: -webkit-gradient(linear, left top, left bottom, from($gradient-color1), to($gradient-color2));
   background-image: -webkit-linear-gradient($gradient-color1, $gradient-color2);
   background-image: -moz-linear-gradient($gradient-color1, $gradient-color2);
@@ -91,36 +90,25 @@ $card-m-width: 100px;
 
 @mixin gradient-bg {
   background-color: $main-color5;
-  // text-align:center;vertical-align : middle; display : table-cell;
-  // background-image: -webkit-gradient(linear, left top, left bottom, from($gradient-color1), to($gradient-color2));
-  // background-image: -webkit-linear-gradient($gradient-color1, $gradient-color2);
-  // background-image: -moz-linear-gradient($gradient-color1, $gradient-color2);
-  // background-image: -ms-linear-gradient($gradient-color1, $gradient-color2);
-  // background-image: -o-linear-gradient($gradient-color1, $gradient-color2);
-  // background-image: linear-gradient($gradient-color1, $gradient-color2);
-  // box-shadow: 5px 10px $shadow-color2;
 }
 
 @mixin gradient-menu-bg {
   background-color: $main-color !important;
-  // background: -moz-linear-gradient(90deg, $gradient-color1, $gradient-color2 100%);
-  // background: -webkit-linear-gradient(90deg, $gradient-color1, $gradient-color2 100%);
-  // background: linear-gradient(90deg, $gradient-color1, $gradient-color2 100%);
-  // filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=$gradient-color1,endColorstr=$gradient-color2,GradientType=1);
 }
 
 @mixin gradient-header-bg {
   background: $main-color5;
-  // background: -moz-linear-gradient(90deg, $gradient-color3, $gradient-color1 100%);
-  // background: -webkit-linear-gradient(90deg, $gradient-color3, $gradient-color1 100%);
-  // background: linear-gradient(90deg, $gradient-color3, $gradient-color1 100%);
-  // filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=$gradient-color3,endColorstr=$gradient-color1,GradientType=1);
 }
 
 @mixin shadows-btn {
   -webkit-box-shadow: 0px 0px 4px 0px $shadow-color1;
   -moz-box-shadow: 0px 0px 4px 0px $shadow-color1;
   box-shadow: 0px 0px 4px 0px $shadow-color1;
+}
+
+@mixin card-bg {
+  background: rgb(138, 138, 138);
+  background: linear-gradient(90deg, rgba(138, 138, 138, 1) 0%, rgba(0, 212, 255, 1) 100%, rgba(0, 212, 255, 1) 100%);
 }
 
 .bd-radius {
