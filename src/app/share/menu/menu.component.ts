@@ -59,7 +59,7 @@ export class MenuComponent implements OnInit {
       },
       {
         label: 'Exlample',
-        url: '/exlample'
+        url: '/example'
       }
     ];
   }
