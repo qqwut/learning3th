@@ -18,9 +18,10 @@ import { RadioButtonModule } from 'primeng/radiobutton';
 import { FileUploadModule } from 'primeng/fileupload';
 import { CheckboxModule } from 'primeng/checkbox';
 import { DialogModule } from 'primeng/dialog';
-
+import { RunKeywordIfComponent } from './run-keyword-if/run-keyword-if.component';
+import { ExampleComponent } from "./example/example.component";
 @NgModule({
-  declarations: [DashboardComponent, MenuComponent, ContentComponent],
+  declarations: [DashboardComponent, MenuComponent, ContentComponent, ExampleComponent, RunKeywordIfComponent],
   imports: [
     AdminRoutingModule,
     CommonModule,
