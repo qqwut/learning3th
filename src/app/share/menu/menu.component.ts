@@ -56,6 +56,10 @@ export class MenuComponent implements OnInit {
             // icon: 'pi pi-pi pi-search'
           }
         ]
+      },
+      {
+        label: 'Exlample',
+        url: '/exlample'
       }
     ];
   }
