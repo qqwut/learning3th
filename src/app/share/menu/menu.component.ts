@@ -49,7 +49,7 @@ export class MenuComponent implements OnInit {
           },
           {
             label: 'Run Keyword If',
-            // icon: 'pi pi-pi pi-search'
+            url: '/admin/run-keyword-if'
           },
           {
             label: 'Other',
@@ -58,8 +58,8 @@ export class MenuComponent implements OnInit {
         ]
       },
       {
-        label: 'Exlample',
-        url: '/example'
+        label: 'Example',
+        url: '/admin/example'
       }
     ];
   }

@@ -4,7 +4,7 @@
   background-color: $top-menu-background !important;
   color: $left-menu-color !important;
   border: unset !important;
-  @extend .bd-radius;
+  // @extend .bd-radius;
 }
 
 @mixin bg-menu-active {
@@ -37,7 +37,7 @@
 .ui-panelmenu-header > .ui-state-active {
   // background-color: #e6b706 !important;
   @include bg-menu-active;
-  @extend .bd-radius;
+  // @extend .bd-radius;
 }
 
 .ui-panelmenu .ui-panelmenu-header > a {
@@ -61,14 +61,15 @@
 
 .ui-panelmenu .ui-panelmenu-content .ui-menuitem .ui-menuitem-link {
   font-weight: 700px !important;
-  background-color: $main-color2 !important;
+  background-color: $main-color !important;
   color: $left-menu-color !important;
 }
 
 .ui-panelmenu .ui-panelmenu-content > .ui-panelmenu-root-submenu > .ui-submenu-list {
-  background-color: $main-color2 !important;
+  background-color: $main-color !important;
   border-radius: 0px !important;
   margin: -1px !important;
+  padding: 1px 10px 10px 55px;
 }
 .ui-panelmenu-content:hover {
   // span {
@@ -225,7 +226,7 @@ body .ui-datepicker table td.ui-datepicker-today > span.ui-state-active {
 
 .ui-widget,
 .ui-widget * {
-  @extend .bd-radius;
+  // @extend .bd-radius;
 }
 
 .ui-dropdown .ui-dropdown-trigger .ui-dropdown-trigger-icon {
@@ -446,7 +447,7 @@ input[type="text"]:disabled {
 .card .body button {
   position: absolute;
   background-color: $card-bg-title-color;
-  color: #FFF;
+  color: #fff;
   border-radius: 20px;
   height: 25px;
   border-style: unset;
