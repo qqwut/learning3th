@@ -1,0 +1,59 @@
+<div class="main">
+    <div class="header">
+        <div class="ui-g">
+            <div class="ui-g-2 ui-lg-9 ui-md-6 ui-xs-6">
+                <div class="menu-phone">
+                    <span (click)="clickMenu($event)"><i class="pi pi-align-justify"></i></span>
+                </div>
+                <div class="menu-logo">
+                    <!-- <img src="/assets/images/logo_recruitment.png" class="image-logo" alt=""> -->
+                </div>
+            </div>
+            <div class="ui-g-10 ui-lg-3 ui-md-6 ui-xs-6 hi">
+                <div class="ui-g-8 pd-top" style="text-align: right;">
+                    <!-- <div class="menu-user"><b>Register | Sign In</b></div> -->
+                    <div>{{transactionData?.customer?.name}}</div>
+                </div>
+                <div class="ui-g-4 pd-top">
+                    <div class="img-circle">
+                        <p-menu #menu [popup]="true" [model]="items"></p-menu>
+                        <!-- <span (click)="menu.toggle($event)" style="padding: 2px;"><i class="pi pi-user"></i></span> -->
+                        <span (click)="menu.toggle($event)" style="padding: 2px;"><i class="pi pi-user"></i></span>
+                    </div>
+                </div>
+            </div>
+            <div class="ui-g w-screen-search"><input type="text" class="input-search" placeholder="Search..."></div>
+            <div class="ui-g w-screen">
+                <div class="menu-list" style="width:100%;text-align: center;padding:0px;">
+                    <div class="ui-g-3" style="padding:0px;">
+                        <div class="menu-ac"><span class="menu-li">&nbsp;บทความ</span></div>
+                    </div>
+                    <div class="ui-g-3" style="padding:0px;">
+                        <div class="menu-ac"><span class="menu-li">&nbsp;Q&A</span></div>
+                    </div>
+                    <div class="ui-g-3" style="padding:0px;">
+                        <div class="menu-ac"><span class="menu-li">&nbsp;ข่าวสาร</span></div>
+                    </div>
+                    <div class="ui-g-3" style="padding:0px;">
+                        <div class="menu-ac"><span class="menu-li">&nbsp;กิจกรรม</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="nav-trigger"><span></span></a>
+    </div>
+    <div class="ui-g">
+        <div class="side-nav">
+            <div class="logo">
+                <h1 style="margin-top: 0px;padding-top: 19px;color: #FFF;">Learnning3thai</h1>
+                <hr>
+            </div>
+            <div class="menu-left">
+                <p-panelMenu [model]="menuBar" [style]="{'width':'100%','height':'100%'}"></p-panelMenu>
+            </div>
+        </div>
+        <div class="main-content" style="position:absolute;">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

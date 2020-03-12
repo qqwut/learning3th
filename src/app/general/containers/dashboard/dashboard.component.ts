@@ -1,7 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthenticationService } from "./../../service/authentication/authentication.service";
+import { AuthenticationService } from "../../../service/authentication/authentication.service";
 import { Router } from '@angular/router';
 import { MenuItem } from 'primeng/api';
+import { TransactionService } from "../../../share/services/transaction.service";
+import { TransactionData } from "../../../share/services/models/Transaction.data";
+
+import { MENU_ADMIN, MENU_USER } from "../../../share/constants/data.constant";
 
 @Component({
   selector: 'app-dashboard',
@@ -10,27 +14,25 @@ import { MenuItem } from 'primeng/api';
 })
 
 export class DashboardComponent implements OnInit {
-  items: MenuItem[];
   currentUser: any;
+  menuBar: MenuItem[];
+  items: MenuItem[];
+  transactionData: TransactionData;
+
   constructor(
     private router: Router,
-    private authenticationService: AuthenticationService
+    private authenticationService: AuthenticationService,
+    private transactionService: TransactionService<TransactionData>,
   ) { }
 
   ngOnInit() {
-    this.items = [
-      { label: 'View', icon: '' },
-      { label: 'Edit', icon: '' },
-      {
-        label: 'Sign Out', routerLink: ['/login'],
-        // command: (event: any) => {
-        // }
-      }
-    ];
+    this.menuBar = MENU_ADMIN;
+    this.items = MENU_USER;
     this.currentUser = this.authenticationService.currentUserValue;
+    this.transactionData = this.transactionService.load();
   }
 
-  clickMenu(event) {
+  clickMenu(_event) {
     let nameNav = document.getElementsByClassName('side-nav');
     nameNav[0]['style'].display = "block";
     nameNav[0]['style'].zIndex = 3;

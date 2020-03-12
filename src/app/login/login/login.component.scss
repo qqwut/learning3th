@@ -1,0 +1,22 @@
+.login {
+  border: solid #888 1px;
+  border-radius: 20px;
+  width: 550px;
+  margin: auto;
+  margin-top: 30vh;
+  padding: 5% 8% 5% 8%;
+
+  input {
+    width: 100%;
+    margin: 10px;
+    border-radius: 10px !important;
+  }
+
+  button {
+    width: 100%;
+    margin: 10px;
+    border-radius: 10px !important;
+    height: 35px;
+    padding: 6px;
+  }
+}

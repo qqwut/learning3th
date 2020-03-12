@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { DashboardComponent } from "./dashboard/dashboard.component";
-import { ContentComponent } from "./content/content.component";
+import { DashboardComponent } from "./containers/dashboard/dashboard.component";
+import { ContentComponent } from "./containers/content/content.component";
 import { RunKeywordIfComponent } from './run-keyword-if/run-keyword-if.component';
 import { ExampleComponent } from './example/example.component';
 

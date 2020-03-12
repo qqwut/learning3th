@@ -15,6 +15,10 @@ const routes: Routes = [
   {
     path: 'admin',
     loadChildren: './admin/admin.module#AdminModule'
+  },
+  {
+    path: 'general',
+    loadChildren: './general/general.module#GeneralModule'
   }
 ];
 
