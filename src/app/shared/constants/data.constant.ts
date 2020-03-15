@@ -87,8 +87,8 @@ export var MENU_GENERAL = [
 ];
 
 export var MENU_USER = [
-    { label: 'View', icon: '' },
-    { label: 'Edit', icon: '' },
+    { label: 'บทความของคุณ', routerLink: '/general/content/by-user' },
+    { label: 'แก้ไขข้อมูลส่วนตัว', routerLink: '' },
     {
         label: 'Sign Out', routerLink: ['/login'],
         // command: (event: any) => {

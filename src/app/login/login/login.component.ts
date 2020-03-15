@@ -19,6 +19,7 @@ export class LoginComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.user = 'general';
     this.transactionData = this.transactionService.load();
   }
 
@@ -33,11 +34,11 @@ export class LoginComponent implements OnInit {
       };
 
     } else if (type && type.toLocaleLowerCase() == 'general') {
-      this.router.navigate(['/general']);
+      this.router.navigate(['/general/content/by-user']);
       this.transactionData.role = 'general';
       this.transactionData.customer = {
         id: 'G0001',
-        name: 'general'
+        name: 'kachain'
       };
 
     } else {

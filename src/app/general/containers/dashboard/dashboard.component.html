@@ -15,27 +15,40 @@
                     <div>{{transactionData?.customer?.name}}</div>
                 </div>
                 <div class="ui-g-4 pd-top">
-                    <div class="img-circle">
-                        <p-menu #menu [popup]="true" [model]="items"></p-menu>
+                    <!-- <div class="img-circle"> -->
+                    <p-menu [style]="{'line-height': '15px','border-radius':'10px !important'}" #menu [popup]="true" [model]="items"></p-menu>
                         <!-- <span (click)="menu.toggle($event)" style="padding: 2px;"><i class="pi pi-user"></i></span> -->
-                        <span (click)="menu.toggle($event)" style="padding: 2px;"><i class="pi pi-user"></i></span>
-                    </div>
+                        <img style="width: 50px;" src="assets/img/png.png" alt="">
+                        <span (click)="menu.toggle($event)" style="position: absolute;font-size: 25px;color: #888;cursor: pointer;margin-left: 13px;"><i class="pi pi-list"></i></span>
+                    <!-- </div> -->
                 </div>
             </div>
             <div class="ui-g w-screen-search"><input type="text" class="input-search" placeholder="Search..."></div>
             <div class="ui-g w-screen">
                 <div class="menu-list" style="width:100%;text-align: center;padding:0px;">
-                    <div class="ui-g-3" style="padding:0px;">
-                        <div class="menu-ac"><span class="menu-li">&nbsp;บทความ</span></div>
+                    <div class="ui-g-3" style="padding:0px;" routerLink="/general/content">
+                        <div class="menu-ac"
+                            [ngClass]="{ 'menu-ac-active': (routerCurrent == '/general/content/list' || routerCurrent == '/general/content/detail/1') }">
+                            <span class="menu-li">&nbsp;บทความ</span>
+                        </div>
                     </div>
-                    <div class="ui-g-3" style="padding:0px;">
-                        <div class="menu-ac"><span class="menu-li">&nbsp;Q&A</span></div>
+                    <div class="ui-g-3" style="padding:0px;" routerLink="/general/qa">
+                        <div class="menu-ac"
+                            [ngClass]="{ 'menu-ac-active': routerCurrent == '/general/qa/list' }">
+                            <span class="menu-li">&nbsp;Q&A</span>
+                        </div>
                     </div>
-                    <div class="ui-g-3" style="padding:0px;">
-                        <div class="menu-ac"><span class="menu-li">&nbsp;ข่าวสาร</span></div>
+                    <div class="ui-g-3" style="padding:0px;" routerLink="/general/news">
+                        <div class="menu-ac"
+                            [ngClass]="{ 'menu-ac-active': routerCurrent == '/general/news/list' }">
+                            <span class="menu-li">&nbsp;ข่าวสาร</span>
+                        </div>
                     </div>
-                    <div class="ui-g-3" style="padding:0px;">
-                        <div class="menu-ac"><span class="menu-li">&nbsp;กิจกรรม</span></div>
+                    <div class="ui-g-3" style="padding:0px;" routerLink="/general/activity">
+                        <div class="menu-ac"
+                            [ngClass]="{ 'menu-ac-active': routerCurrent == '/general/activity/list' }">
+                            <span class="menu-li">&nbsp;กิจกรรม</span>
+                        </div>
                     </div>
                 </div>
             </div>

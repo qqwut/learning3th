@@ -164,6 +164,13 @@ $all: 50%;
   cursor: pointer;
 }
 
+.menu-ac-active {
+  background-color: $main-color;
+  color: #fff;
+  border-radius: $bd-radius;
+  cursor: pointer;
+}
+
 .menu-li {
   // PHONE
   position: initial;

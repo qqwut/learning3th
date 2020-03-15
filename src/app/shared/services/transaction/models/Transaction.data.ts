@@ -1,4 +1,5 @@
 export interface TransactionData {
+    url: string,
     customer?: Customer;
     transactionId?: string;
     role?: string;

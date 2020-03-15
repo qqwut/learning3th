@@ -17,12 +17,10 @@ import { DialogModule } from 'primeng/dialog';
 // COMPONENT
 import { GeneralRoutingModule } from './general-routing.module';
 import { DashboardComponent } from './containers/dashboard/dashboard.component';
-import { ContentComponent } from "./containers/content/content.component";
-// import { RunKeywordIfComponent } from './../shared/containers/run-keyword-if/run-keyword-if.component';
-// import { ExampleComponent } from './../shared/containers/example/example.component';
+import { GeneralHomeComponent } from './containers/general-home/general-home.component';
 
 @NgModule({
-  declarations: [DashboardComponent, ContentComponent],
+  declarations: [DashboardComponent, GeneralHomeComponent],
   imports: [
     SharedModule,
     GeneralRoutingModule,

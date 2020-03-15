@@ -2,11 +2,12 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { GeneralTopContentRoutingModule } from './general-top-content-routing.module';
-import { GeneralContentListComponent } from './general-content-list/general-content-list.component';
-import { GeneralContentDetailComponent } from './general-content-detail/general-content-detail.component';
+import { GeneralTopContentListComponent } from './general-top-content-list/general-top-content-list.component';
+import { GeneralTopContentDetailComponent } from './general-top-content-detail/general-top-content-detail.component';
+import { GeneralTopConteByUserComponent } from './general-top-conte-by-user/general-top-conte-by-user.component';
 
 @NgModule({
-  declarations: [GeneralContentListComponent, GeneralContentDetailComponent],
+  declarations: [GeneralTopContentListComponent, GeneralTopContentDetailComponent, GeneralTopConteByUserComponent],
   imports: [
     CommonModule,
     GeneralTopContentRoutingModule

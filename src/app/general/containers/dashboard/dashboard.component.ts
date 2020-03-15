@@ -14,6 +14,7 @@ import { MENU_GENERAL, MENU_USER } from "../../../shared/constants/data.constant
 })
 
 export class DashboardComponent implements OnInit {
+  routerCurrent: any;
   currentUser: any;
   menuBar: MenuItem[];
   items: MenuItem[];
@@ -23,13 +24,18 @@ export class DashboardComponent implements OnInit {
     private router: Router,
     private authenticationService: AuthenticationService,
     private transactionService: TransactionService<TransactionData>,
-  ) { }
+  ) {
+  }
 
   ngOnInit() {
     this.menuBar = MENU_GENERAL;
     this.items = MENU_USER;
     this.currentUser = this.authenticationService.currentUserValue;
-    this.transactionData = this.transactionService.load();
+
+    setInterval(() => {
+      this.routerCurrent = this.router.url;
+    }, 100);
+
   }
 
   clickMenu(_event) {
@@ -39,6 +45,10 @@ export class DashboardComponent implements OnInit {
 
     let nameLogo = document.getElementsByClassName('logo');
     nameLogo[0]['style'].width = "100%";
+  }
+
+  updateUrl() {
+
   }
 
 }

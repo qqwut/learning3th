@@ -16,7 +16,8 @@
                 </div>
                 <div class="ui-g-4 pd-top">
                     <div class="img-circle">
-                        <p-menu #menu [popup]="true" [model]="items"></p-menu>
+                        <!-- <p-menu #menu [popup]="true" [model]="items"></p-menu> -->
+                        <p-menu [style]="{'line-height': '15px','border-radius':'10px !important'}" #menu [popup]="true" [model]="items"></p-menu>
                         <!-- <span (click)="menu.toggle($event)" style="padding: 2px;"><i class="pi pi-user"></i></span> -->
                         <span (click)="menu.toggle($event)" style="padding: 2px;"><i class="pi pi-user"></i></span>
                     </div>

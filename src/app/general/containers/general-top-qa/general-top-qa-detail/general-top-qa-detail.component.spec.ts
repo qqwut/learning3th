@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GeneralContentListComponent } from './general-content-list.component';
+import { GeneralTopQaDetailComponent } from './general-top-qa-detail.component';
 
-describe('GeneralContentListComponent', () => {
-  let component: GeneralContentListComponent;
-  let fixture: ComponentFixture<GeneralContentListComponent>;
+describe('GeneralTopQaDetailComponent', () => {
+  let component: GeneralTopQaDetailComponent;
+  let fixture: ComponentFixture<GeneralTopQaDetailComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ GeneralContentListComponent ]
+      declarations: [ GeneralTopQaDetailComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(GeneralContentListComponent);
+    fixture = TestBed.createComponent(GeneralTopQaDetailComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
