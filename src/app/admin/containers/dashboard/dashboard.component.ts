@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthenticationService } from "../../../service/authentication/authentication.service";
+import { AuthenticationService } from "../../../shared/services/authentication/authentication.service";
 import { Router } from '@angular/router';
 import { MenuItem } from 'primeng/api';
-import { TransactionService } from "../../../share/services/transaction.service";
-import { TransactionData } from "../../../share/services/models/Transaction.data";
-import { MENU_ADMIN, MENU_USER } from "../../../share/constants/data.constant";
+import { TransactionService } from "../../../shared/services/transaction/transaction.service";
+import { TransactionData } from "../../../shared/services/transaction/models/Transaction.data";
+import { MENU_ADMIN, MENU_USER } from "../../../shared/constants/data.constant";
 
 @Component({
   selector: 'app-dashboard',

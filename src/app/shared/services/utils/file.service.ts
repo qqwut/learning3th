@@ -1,12 +1,11 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { httpServices } from "./../http.service";
-
+import { HttpService } from "../http/http.service";
 @Injectable()
 export class fileService {
     constructor(
         private http: HttpClient,
-        private httpService: httpServices,
+        private httpService: HttpService,
     ) { }
 
     get(data): Promise<any> {

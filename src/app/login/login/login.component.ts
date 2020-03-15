@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
-import { TransactionService } from "./../../share/services/transaction.service";
-import { TransactionData } from "../../share/services/models/Transaction.data";
+import { TransactionService } from "../../shared/services/transaction/transaction.service";
+import { TransactionData } from "../../shared/services/transaction/models/Transaction.data";
 
 @Component({
   selector: 'app-login',

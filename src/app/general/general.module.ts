@@ -1,12 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
-
-import { GeneralRoutingModule } from './general-routing.module';
-import { DashboardComponent } from './containers/dashboard/dashboard.component';
-// import { MenuComponent } from "./../share/menu/menu.component";
-import { ContentComponent } from "./containers/content/content.component";
+import { SharedModule } from "./../shared/shared.module";
 
 // PRIMENG
 import { PanelMenuModule } from 'primeng/panelmenu';
@@ -19,9 +14,17 @@ import { FileUploadModule } from 'primeng/fileupload';
 import { CheckboxModule } from 'primeng/checkbox';
 import { DialogModule } from 'primeng/dialog';
 
+// COMPONENT
+import { GeneralRoutingModule } from './general-routing.module';
+import { DashboardComponent } from './containers/dashboard/dashboard.component';
+import { ContentComponent } from "./containers/content/content.component";
+// import { RunKeywordIfComponent } from './../shared/containers/run-keyword-if/run-keyword-if.component';
+// import { ExampleComponent } from './../shared/containers/example/example.component';
+
 @NgModule({
   declarations: [DashboardComponent, ContentComponent],
   imports: [
+    SharedModule,
     GeneralRoutingModule,
     CommonModule,
     FormsModule,

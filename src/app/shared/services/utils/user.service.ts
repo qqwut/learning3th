@@ -2,8 +2,17 @@ import { Component, Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { User } from './../models/user';
+// import { User } from '../../../service/models/user';
 import * as jwt_decode from "jwt-decode";
+
+export class User {
+    id: number;
+    username: string;
+    password: string;
+    firstName: string;
+    lastName: string;
+    token: string;
+}
 
 @Injectable()
 export class userService {

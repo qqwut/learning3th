@@ -2,7 +2,7 @@
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { User } from '../models';
+import { User } from '../utils/models';
 import { Router, CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 import * as jwt_decode from "jwt-decode";
 

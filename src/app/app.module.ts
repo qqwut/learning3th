@@ -5,9 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { AuthenticationService } from "./service/authentication/authentication.service";
-import { httpServices } from "./service/http.service";
-import { SharedModule } from './share/shared.module';
+import { AuthenticationService } from "./shared/services/authentication/authentication.service";
+import { HttpService } from "./shared/services/http/http.service";
+// import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -20,10 +20,10 @@ import { SharedModule } from './share/shared.module';
     ReactiveFormsModule,
     HttpClientModule,
     FormsModule,
-    SharedModule
+    // SharedModule
   ],
   providers: [
-    httpServices,
+    HttpService,
     AuthenticationService,
     ErrorHandler
   ],

@@ -1,47 +1,3 @@
-export var MENU_GENERAL = [
-    {
-        label: 'HOME',
-        command: (event: any) => {
-        }
-    },
-    {
-        label: 'Learning'
-    },
-    {
-        label: 'SeleniumLibrary',
-        items: [
-            {
-                label: 'Open Browser'
-            },
-            {
-                label: 'Open Browser2'
-            },
-            {
-                label: 'Open Browser3'
-            }
-        ]
-    },
-    {
-        label: 'BuiltIn',
-        items: [
-            {
-                label: 'Convert To String'
-            },
-            {
-                label: 'Run Keyword If',
-                url: '/admin/run-keyword-if'
-            },
-            {
-                label: 'Other'
-            }
-        ]
-    },
-    {
-        label: 'Example',
-        url: '/admin/example'
-    }
-];
-
 export var MENU_ADMIN = [
     {
         label: 'HOME',
@@ -73,7 +29,7 @@ export var MENU_ADMIN = [
             },
             {
                 label: 'Run Keyword If',
-                url: '/admin/run-keyword-if'
+                routerLink: '/admin/run-keyword-if'
             },
             {
                 label: 'Other'
@@ -82,7 +38,51 @@ export var MENU_ADMIN = [
     },
     {
         label: 'Example',
-        url: '/admin/example'
+        routerLink: '/admin/example'
+    }
+];
+
+export var MENU_GENERAL = [
+    {
+        label: 'HOME',
+        command: (event: any) => {
+        }
+    },
+    {
+        label: 'Learning'
+    },
+    {
+        label: 'SeleniumLibrary',
+        items: [
+            {
+                label: 'Open Browser'
+            },
+            {
+                label: 'Open Browser2'
+            },
+            {
+                label: 'Open Browser3'
+            }
+        ]
+    },
+    {
+        label: 'BuiltIn',
+        items: [
+            {
+                label: 'Convert To String'
+            },
+            {
+                label: 'Run Keyword If',
+                routerLink: '/general/run-keyword-if'
+            },
+            {
+                label: 'Other'
+            }
+        ]
+    },
+    {
+        label: 'Example',
+        routerLink: '/general/example'
     }
 ];
 
