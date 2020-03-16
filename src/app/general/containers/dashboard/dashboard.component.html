@@ -28,7 +28,12 @@
                 <div class="menu-list" style="width:100%;text-align: center;padding:0px;">
                     <div class="ui-g-3" style="padding:0px;" routerLink="/general/content">
                         <div class="menu-ac"
-                            [ngClass]="{ 'menu-ac-active': (routerCurrent == '/general/content/list' || routerCurrent == '/general/content/detail/1') }">
+                            [ngClass]="{ 
+                                'menu-ac-active': (
+                                    routerCurrent == '/general/content/list' || 
+                                    routerCurrent == '/general/content/detail/1' || 
+                                    routerCurrent == '/general/content/create'
+                                    ) }">
                             <span class="menu-li">&nbsp;บทความ</span>
                         </div>
                     </div>
