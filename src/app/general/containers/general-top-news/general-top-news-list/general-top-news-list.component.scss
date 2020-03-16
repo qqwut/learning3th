@@ -1,0 +1,12 @@
+.content {
+    text-align: center;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 300px 700px;
+    height: 200px;
+    justify-content: center;
+    text-align: center;
+    grid-gap: 30px;
+}
