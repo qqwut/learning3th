@@ -1,6 +1,6 @@
 <div class="content">
-    <div class="ui-g-12" style="text-align: right;">+ เพิ่มข้อความ</div>
-    <div class="ui-g-12" *ngFor="let item of [1,2,3]; let i=index">
+    <!-- <div class="ui-g-12" style="text-align: right;">+ เพิ่มข้อความ</div> -->
+    <div class="ui-g-12">
         <div class="ui-g-12">
             <div class="ui-g-8 ui-md-8">
                 <span><i>icon</i></span>&nbsp;
@@ -9,31 +9,70 @@
                 <span><i>icon</i></span>&nbsp;
             </div>
             <div class="ui-g-4 ui-md-4">
-                <div class="ui-g-9" style="text-align: right;font-size: 12px;line-height: 10px;">
-                    <p>{{transactionData?.customer?.name}}</p>
-                    <p>created</p>
-                    <p>{{dateNow}}</p>
+                <div class="ui-g-9" style="text-align: right;font-size: 12px;line-height: 10px;" >
+                    <p>Kachen Anuritpraserd</p>
+                    <p>วันที 16  มีนาคม  เวลา 18:00 น.</p>
                 </div>
                 <div class="ui-g-3" style="text-align: center;">
-                    <img style="width: 50px;" src="assets/img/t{{i+1}}.png" alt="">
+                    <img style="width: 50px; border-radius: 50%" src="https://miro.medium.com/fit/c/96/96/0*fgn9C09BakRzpzv_" alt="Kachain Anuritpraseart" >
                 </div>
             </div>
             <hr style="width: 100%;margin: auto;">
         </div>
-        <div class="ui-g-12" (click)="view(item)" style="cursor: pointer;">
+        <div class="ui-g-12" style="cursor: pointer;">
             <div class="ui-g-12">
-                <h3>title</h3>
+                <h3>บทความ</h3>
             </div>
             <div class="ui-g-12">
                 <div class="ui-g-6">
-                    <img style="width: 100%;" src="assets/img/test1.jpg" alt="">
+                    <img style="width: 100%;" src="assets/img/robot_ch.jpeg" alt="" (click)="view()">
                 </div>
                 <div class="ui-g-6">
-                    content content content content content content content content
-                    content content content content content content content content
-                    content content content content content content content content
+                    สำหรับผู้ที่อยากเริ่มต้นเรียนรู้ Robot Framework ผมได้ทำคลิปวิดีโอไว้มาลองเรียนรู้และศึกษาไปด้วยกันนะครับ
+                    <br><br><b>Workshop Beginner</b>
+                <br>1. เปิดเว็บไซต์ google
+                <br>2. กรอกคำว่า Robot Framework
+                <br>3. กดค้นหา
+                <br>4. คลิ๊กไปที่ Robot Framework
+                <br>5. เช็คหน้าเว็บ
                 </div>
             </div>
         </div>
+        <div class="ui-g-12">
+            <div class="ui-g-12">
+                <div class="ui-g-8 ui-md-8">
+                    <!-- <span><i>icon</i></span>&nbsp;
+                    <span><i>icon</i></span>&nbsp;
+                    <span><i>icon</i></span>&nbsp;
+                    <span><i>icon</i></span>&nbsp; -->
+                </div>
+                <div class="ui-g-4 ui-md-4">
+                    <div class="ui-g-9" style="text-align: right;font-size: 12px;line-height: 10px;" >
+                        <!-- <img alt="Kachain Anuritpraseart" class="r dn do dp" src="https://miro.medium.com/fit/c/96/96/0*fgn9C09BakRzpzv_" width="48" height="48"> -->
+                        <p>Tanapon Kunboran</p>
+                        <p>วันที 15  มีนาคม  เวลา 17:30 น.</p>
+                    </div>
+                    <div class="ui-g-3" style="text-align: center;">
+                        <img style="width: 50px; border-radius: 50%" src="https://miro.medium.com/fit/c/96/96/0*fgn9C09BakRzpzv_" alt="Kachain Anuritpraseart" >
+                    </div>
+                </div>
+                <hr style="width: 100%;margin: auto;">
+            </div>
+            <div class="ui-g-12" style="cursor: pointer;">
+                <div class="ui-g-12">
+                    <h3>บทความ</h3>
+                </div>
+                <div class="ui-g-12">
+                    <div class="ui-g-6">
+                        <img style="width: 100%;" src="assets/img/robot_img.png" alt="" (click)="view()">
+                    </div>
+                    <div class="ui-g-6">
+                        สวัสดีครับ ช่วงนี้มี Blog ดีๆ เกี่ยวกับ Contract testing ทั้งจากน้องน็อต SET ของ Line Traitanit และพี่ UP1 ส่วนที่บริษัทที่ผมอยู่ปัจจุบันเอง ยังไม่ได้เริ่มมี Contract testing เลย ก็พยายามจะบอกให้น้อง ๆ เริ่มเขียนบ้าง แต่ก็แอบเอ๊ะในใจว่าไม่มีใครเขียนวิธีการทำ Contract testing ด้วย RBFW เลยก็เลยเป็นที่มาของ Post แรกของผม Post นี้ครับ
+                        <br><br><b>มาสร้าง Contract testing ด้วย robotframework และ RESTinstance กันเถอะ</b>
+                    <br><i>*** บทความนี้ได้รับแรงบัลดาลใจจาก Traitanit ดังนั้น ตัวอย่างและอื่นๆ ผมก็ลอกเขาดุ้น ๆ เลยครับ ฮาๆ ขออภัยมา ณ ที่นี้ ***</i>
+                    </div>
+                </div>
+            </div>
+        </div> 
     </div>
 </div>
