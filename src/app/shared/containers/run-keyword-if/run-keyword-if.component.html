@@ -1,5 +1,5 @@
-
 <div class="content">
+    <div class="ui-g-9">
     <p-accordion>
         <p-accordionTab header="Run Keyword If" [selected]="true">
             <h3>Library  BuiltIn</h3>
@@ -16,7 +16,6 @@
                     <p>บรรทัดที่ 7 : ถ้า type ของข้อมูลไม่เท่ากับ str จะแสดงผลลัพธ์คำว่า Test Fail</p></ul>
                 </p-accordionTab>
     </p-accordion>
-
     <p-accordion>
         <p-accordionTab header="Python คำสั่งเลือกเงื่อนไข">
             <h2>>> Python คำสั่งเลือกเงื่อนไข <<</h2>
@@ -58,4 +57,28 @@
         </ul>
         </p-accordionTab>
     </p-accordion>
+    </div>
+    <div class="ui-g-3" style="border-left: 1px solid #888;min-height: 100vh;">
+        <!-- <div class="ui-g-3" style="border-left: 1px solid #888;min-height: 100vh;"> -->
+            <h3>New Blogs</h3>
+            <div class="card-menu-right ui-g-12" *ngFor="let item of [1,2,3]; let i=index">
+                <div class="ui-g-3" style="position: relative;line-height: 16px;"><img style="width: 50px;" src="assets/img/t{{i+1}}.png" alt=""></div>
+                <div class="ui-g-9" style="position: relative;line-height: 16px;">content content content content content </div>
+            </div>
+    
+            <h3>Poppular Blogs</h3>
+            <div class="card-menu-right ui-g-12" *ngFor="let item of [1,2,3]; let i=index">
+                <div class="ui-g-3" style="position: relative;line-height: 16px;"><img style="width: 50px;" src="assets/img/t{{i+1}}.png" alt=""></div>
+                <div class="ui-g-9" style="position: relative;line-height: 16px;">content content content content content </div>
+            </div>
+    
+            <h3>New ข่าวสาร</h3>
+            <div class="card-menu-right ui-g-12" *ngFor="let item of [1,2,3]; let i=index">
+                <div class="ui-g-3" style="position: relative;line-height: 16px;"><img style="width: 50px;" src="assets/img/t{{i+1}}.png" alt=""></div>
+                <div class="ui-g-9" style="position: relative;line-height: 16px;">content content content content content </div>
+            </div>
+        </div>
+        </div>
+
+    
     
