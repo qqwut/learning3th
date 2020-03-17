@@ -1,26 +1,61 @@
 
 <div class="content">
     <p-accordion>
+        <p-accordionTab header="Run Keyword If" [selected]="true">
+            <h3>Library  BuiltIn</h3>
+            <p>ในเนื้อหานี้จะเป็นการแนะนำการใช้ keyword ที่มีชื่อว่า Run Keyword If รูปแบบการใช้และตัวอย่างการนำไปใช้ครับ สามารถอ่านเพิ่มเติมในรูปแบบของ Python ได้ด้วยนะครับ เผื่อต้องการประยุกต์ใช้ในบางเคส</p>
+            <ul>
+                <h4>รูปแบบการใช้งาน</h4>
+                <!-- <p>คำสั่ง if เป็นคำสั่งที่ใช้ควบคุมการทำงานของโปรแกรมที่เป็นพื้นฐานและง่ายที่สุด เราใช้คำสั่ง if เพื่อสร้างเงื่อนไขให้โปรแกรมทำงานตามที่เราต้องการเมื่อเงื่อนไขนั้นตรงกับที่เรากำหนด เช่น การตรวจสอบค่าในตัวแปรกับตัวดำเนินการประเภทต่างๆ นี่เป็นรูปแบบของการใช้งานคำสั่ง if ในภาษา Python</p> -->
+                <label style="background: #f5f2f0;">Run Keyword If   เงือนไข   keyword อืนๆ</label>
+                <!-- <pre class="code-syntax language-syntax" style="background: #f5f2f0;"><code class=" language-syntax">Run Keyword If   เงือนไข   keyword อืนๆ </code></pre> -->
+                <h4>รูปแบบการใช้งาน</h4>
+                    <label style="background: #f5f2f0;">{{"Run Keyword If  ${status} == PASS  Log To Console Success"}}</label>
+                    <br><br><img style="width: 100%;" src="assets/img/if.png" alt="">
+                    <p>บรรทัดที่ 6 : ใช้ Run Keyword If ในการเช็ค type ของข้อมูลนั้นว่า type ของข้อมูลเท่ากับ str หรือไม่ ถ้าใช่จะแสดงผลลัพธ์คำว่า Test Pass</p>
+                    <p>บรรทัดที่ 7 : ถ้า type ของข้อมูลไม่เท่ากับ str จะแสดงผลลัพธ์คำว่า Test Fail</p></ul>
+                </p-accordionTab>
+    </p-accordion>
+
+    <p-accordion>
         <p-accordionTab header="Python คำสั่งเลือกเงื่อนไข">
             <h2>>> Python คำสั่งเลือกเงื่อนไข <<</h2>
             <p>ในส่วนนี้คุณจะได้เรียนเกี่ยวกับคำสั่งเลือกเงื่อนไขในภาษา Python เราจะพูดถึงการควบคุมการทำงานโปรแกรมด้วยคำสั่ง if, if else และ elif เพื่อให้โปรแกรมสามารถทำงานซับซ้อนและมีประสิทธิภาพมากขึ้น ยกตัวอย่างเช่น เครื่องปรับอากาศจะทำงานอัตโนมัติถ้าหากอุณหภูมิในห้องสูงหรือต่ำเกินไป หรือรถยนต์จะแสดงสัญญาณเตือนหากน้ำมันกำใกล้จะหมด เป็นต้น ซึ่งทั้งหมดนี้เกิดการกำหนดเงื่อนไขการทำงานให้โปรแกรม มาเริ่มกับคำสั่ง if ในภาษา Python</p>
             <ul>
                 <h2>คำสั่ง if</h2>
-                <li>Equals: <span class="w3-codespan">a == b</span></li>
-                <li>Not Equals: <span class="w3-codespan">a != b</span></li>
-                <li>Less than: <span class="w3-codespan">a &lt; b</span></li>
-                <li>Less than or equal to: <span class="w3-codespan">a &lt;= b</span></li>
-                <li>Greater than: <span class="w3-codespan">a &gt; b</span></li>
-                <li>Greater than or equal to: <span class="w3-codespan">a &gt;= b</span></li>
-                </ul>
-                <p>These conditions can be used in several ways, most commonly in "if statements" and loops.</p>
-                <p>An "if statement" is written by using the <span class="w3-codespan">if</span> keyword.</p>
-                <!-- <div class="w3-example">
+                <p>คำสั่ง if เป็นคำสั่งที่ใช้ควบคุมการทำงานของโปรแกรมที่เป็นพื้นฐานและง่ายที่สุด เราใช้คำสั่ง if เพื่อสร้างเงื่อนไขให้โปรแกรมทำงานตามที่เราต้องการเมื่อเงื่อนไขนั้นตรงกับที่เรากำหนด เช่น การตรวจสอบค่าในตัวแปรกับตัวดำเนินการประเภทต่างๆ นี่เป็นรูปแบบของการใช้งานคำสั่ง if ในภาษา Python</p>
+                <pre class="code-syntax language-syntax" style="background: #f5f2f0;"><code class=" language-syntax">if expression:
+                    # statements
+                </code></pre>
+                <p>ในตัวอย่าง เป็นรูปแบบของการใช้งานคำสั่ง if และ expression เป็นเงื่อนไขที่สร้างจากตัวดำเนินการประเภทต่างๆ ที่เป็น boolean expression โดยโปรแกรมจะทำงานในบล็อคคำสั่ง if ถ้าหากเงื่อนไขเป็น True ไม่เช่นนั้นโปรแกรมจะข้ามการทำงานไป ในบล็อคของคำสั่ง if จะประกอบไปด้วยคำสั่งการทำงานของโปรแกรม คำสั่งทั้งหมดในบล็อคต้องมีระยะเว้นช่องว่างที่เท่ากัน ต่อไปมาดูตัวอย่างการใช้งานคำสั่ง if ในภาษา Python</p>
+                <pre class=" language-python" style="background: #f5f2f0;"><code class=" language-python">n <span class="token operator">=</span> <span class="token number">10</span>
+                    <span class="token keyword">if</span> n <span class="token operator">==</span> <span class="token number">10</span><span class="token punctuation">:</span>
+                        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'n equal to 10'</span><span class="token punctuation">)</span>
+                    
+                    logged_in <span class="token operator">=</span> <span class="token boolean">False</span>
+                    <span class="token keyword">if</span> <span class="token operator">not</span> logged_in<span class="token punctuation">:</span>
+                        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'You must login to continue'</span><span class="token punctuation">)</span>
+                    
+                    m <span class="token operator">=</span> <span class="token number">4</span>
+                    <span class="token keyword">if</span> m <span class="token operator">%</span> <span class="token number">2</span> <span class="token operator">==</span> <span class="token number">0</span> <span class="token operator">and</span> m <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">:</span>
+                        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'m is even and positive numbers'</span><span class="token punctuation">)</span>
+                    
+                    <span class="token keyword">if</span> <span class="token number">3</span> <span class="token operator">&gt;</span> <span class="token number">10</span><span class="token punctuation">:</span>
+                        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'This block isn\'t executed'</span><span class="token punctuation">)</span>
+                    </code></pre>
+                    <p>ในตัวอย่าง เป็นการใช้งานคำสั่ง if เพื่อกำหนดให้โปรแกรมทำงานตามเงื่อนไขต่างๆ ในบล็อคแรกเป็นการตรวจสอบค่าในตัวแปร n ว่าเท่ากับ 10 หรือไม่ เนื่องจากค่าในตัวแปรนั้นเท่ากับ 10 ทำให้เงื่อนเป็นจริง และโปรแกรมทำงานในบล็อคของคำสั่ง if และต่อมาเรามีตัวแปร boolean logged_in เก็บค่าสถานะการเข้าสู่ระบบ เราได้ทำการตรวจสอบโดยการใช้ตัวดำเนินการ not สำหรับตรวจสอบว่าถ้าหากผู้ใช้ไม่เข้าสู่ระบบ จะแสดงข้อความบอกว่าต้องเข้าระบบก่อนที่จะใช้งาน</p><br>
+                    <p>ต่อมาเป็นการตรวจสอบค่าในตัวแปร m ว่าเป็นทั้งจำนวนเต็มบวกและจำนวนคู่หรือไม่ เราได้ใช้ตัวดำเนินการ and เพื่อเชื่อม expression ย่อยทั้งสอง และเงื่อนไขเป็นจริงทำให้ในบล็อคคำสั่ง if ทำงาน สุดท้ายเป็นเปรียบเทียบค่าของตัวเลข เราได้เปรียบว่า 3 มากกว่า 10 หรือไม่ เนื่องจากเงื่อนไขเป็น False ทำให้โปรแกรมข้ามการทำงานบล็อคนี้ไป</p>
+                    <pre class="code-result language-result" style="background: #f5f2f0;"><code class=" language-result">                        n equal to 10
+                        You must login to post
+                        m is even and positive numbers
+                        </code></pre>
+            <p>นี่เป็นผลลัพธ์การทำงานของโปรแกรม คุณจะเห็นว่าในสามบล็อคแรกของคำสั่ง if นั้นทำงานเพราะว่าเงื่อนไขเป็นจริงหรือ True และในบล็อคสุดท้ายไม่ทำงานเพราะเงื่อนไขไม่เป็นจริงหรือ False</p><br>
+                   <div class="w3-example">
                     <h3>Example</h3>
                     <p>If statement:</p>
                     <iframe height="500px" width="100%" src="https://repl.it/repls/StupendousFewBytes?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
-                    </div>
-                </div> -->
+                </div>
+        </ul>
         </p-accordionTab>
     </p-accordion>
     
