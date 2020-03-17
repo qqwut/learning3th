@@ -167,16 +167,22 @@ $all: 50%;
 }
 
 .menu-ac:hover {
-  background-color: $main-color;
+  //background-color: $main-color;
+  background: rgb(92,92,92);
+  background: linear-gradient(47deg, rgba(92,92,92,1) 0%, rgba(0,166,228,1) 100%);
   color: #fff;
-  border-radius: $bd-radius;
+  //border-radius: $bd-radius;
+  border-radius: 25px;
   cursor: pointer;
 }
 
 .menu-ac-active {
-  background-color: $main-color;
+  //background-color: $main-color;
+  background: rgb(92,92,92);
+  background: linear-gradient(47deg, rgba(92,92,92,1) 0%, rgba(0,166,228,1) 100%);
   color: #fff;
-  border-radius: $bd-radius;
+  //border-radius: $bd-radius;
+  border-radius: 25px;
   cursor: pointer;
 }
 
