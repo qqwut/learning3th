@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./general-top-activity-list.component.scss']
 })
 export class GeneralTopActivityListComponent implements OnInit {
-
+  map: boolean = false;
   constructor() { }
 
   ngOnInit() {
+  }
+
+  show() {
+    this.map = true;
   }
 
 }

@@ -37,11 +37,21 @@ body {
   margin: auto;
 }
 
-// .side-nav {
-//   margin: -8px;
-// }
-
 .card-content {
+  margin-top: 20px;
   background-color: #fff;
-  box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.hr {
+  width: 100%;
+  margin: auto;
+  margin-top: -20px;
+  background-color: #d0d0d0;
+  height: 1px;
+  border: unset;
+}
+
+.center {
+  text-align: center;
 }
