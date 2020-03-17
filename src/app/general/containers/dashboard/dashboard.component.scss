@@ -108,6 +108,15 @@
   padding-top: 23px;
   vertical-align: middle;
 }
+.bg-banner {
+  background-image: url(/assets/img/banner.jpg);
+  height: 120px;
+  padding-top: calc(20px);
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 .hi {
   height: $top-menu-height;
