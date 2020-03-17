@@ -14,6 +14,7 @@ import { GeneralTopContentCreateComponent } from './general-top-content-create/g
 // PRIMENG
 import { ButtonModule } from 'primeng/button';
 import { RadioButtonModule } from 'primeng/radiobutton';
+import {AccordionModule} from 'primeng/accordion';
 
 @NgModule({
   declarations: [GeneralTopContentListComponent, GeneralTopContentDetailComponent, GeneralTopConteByUserComponent, GeneralTopContentCreateComponent],
@@ -25,7 +26,8 @@ import { RadioButtonModule } from 'primeng/radiobutton';
     RadioButtonModule,
     GeneralTopContentRoutingModule,
     HttpClientModule,
-    AngularEditorModule
+    AngularEditorModule,
+    AccordionModule
   ]
 })
 export class GeneralTopContentModule { }
