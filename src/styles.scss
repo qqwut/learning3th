@@ -55,3 +55,17 @@ body {
 .center {
   text-align: center;
 }
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+.ui-tabview.ui-tabview-top .ui-tabview-nav li {
+  // margin-right: 2px !important;
+  // width: 50% !important;
+  border-radius: 0px !important;
+}
