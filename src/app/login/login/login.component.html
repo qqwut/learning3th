@@ -10,31 +10,76 @@
         <div class="ui-g">
             <div class="ui-g-12">
                 <div class="ui-g-6">
-                    <img src="/assets/img/4000UChip.jpg" style="width: 100%;" alt="">
+                    <img class="imgs" src="/assets/img/cat2-1.jpg" style="width: 100%;" alt="">
                 </div>
                 <div class="ui-g-6">
                     <div class="ui-g-12">
-                        <div class="ui-g-6" style="cursor: pointer;color: #FFF;">
+                        <div class="ui-g-6" style="cursor: pointer;color: #FFF;" (click)="register = false">
                             <h5>เข้าสู่ระบบ</h5>
                         </div>
-                        <div class="ui-g-6" style="cursor: pointer;color: #FFF;">
+                        <div class="ui-g-6" style="cursor: pointer;color: #FFF;" (click)="register = true">
                             <h5>สมัครสมาชิก</h5>
                         </div>
                     </div>
-                    <div class="ui-g-12">
-                        <span class="ui-float-label">
-                            <input id="float-input" type="text" size="30" pInputText>
-                            <label for="float-input">Username</label>
-                        </span>
-                    </div>
-                    <div class="ui-g-12">
-                        <span class="ui-float-label">
-                            <input id="float-input" type="password" size="30" pInputText>
-                            <label for="float-input">Password</label>
-                        </span>
-                    </div>
-                    <div class="ui-g-12">
-                        <button pButton class="btn" (click)="login()">login</button>
+                    <div class="forms">
+                        <div *ngIf="!register">
+                            <div class="ui-g-12" style="margin-top: 20px;">
+                                <span class="ui-float-label">
+                                    <input id="float-input" type="text" size="30" pInputText>
+                                    <label for="float-input">ชื่อผู้ใช้</label>
+                                </span>
+                            </div>
+                            <div class="ui-g-12" style="margin-top: 20px;">
+                                <span class="ui-float-label">
+                                    <input id="float-input" type="password" size="30" pInputText>
+                                    <label for="float-input">รหัสผ่าน</label>
+                                </span>
+                            </div>
+                            <div class="ui-g-12">
+                                <button pButton class="btn-login" (click)="login()">เข้าสู่ระบบ</button>
+                            </div>
+                        </div>
+                        <div *ngIf="register">
+                            <div class="ui-g-12">
+                                <span class="ui-float-label">
+                                    <input id="float-input" type="text" size="30" pInputText>
+                                    <label for="float-input">ชื่อผู้ใช้</label>
+                                </span>
+                            </div>
+                            <div class="ui-g-12">
+                                <span class="ui-float-label">
+                                    <input id="float-input" type="password" size="30" pInputText>
+                                    <label for="float-input">รหัสผ่าสนส</label>
+                                </span>
+                            </div>
+                            <div class="ui-g-12">
+                                <span class="ui-float-label">
+                                    <input id="float-input" type="text" size="30" pInputText>
+                                    <label for="float-input">ชื่อจริง</label>
+                                </span>
+                            </div>
+                            <div class="ui-g-12">
+                                <span class="ui-float-label">
+                                    <input id="float-input" type="text" size="30" pInputText>
+                                    <label for="float-input">นามสกุล</label>
+                                </span>
+                            </div>
+                            <div class="ui-g-12">
+                                <span class="ui-float-label">
+                                    <input id="float-input" type="text" size="30" pInputText>
+                                    <label for="float-input">เบอร์โทร</label>
+                                </span>
+                            </div>
+                            <div class="ui-g-12">
+                                <span class="ui-float-label">
+                                    <input id="float-input" type="text" size="30" pInputText>
+                                    <label for="float-input">อีเมล์</label>
+                                </span>
+                            </div>
+                            <div class="ui-g-12">
+                                <button pButton class="btn-login" (click)="login()">สมัครสมาชิก</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

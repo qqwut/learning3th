@@ -30,26 +30,28 @@ body {
 }
 
 .large-font {
-  font-size: 48px;
+  font-size: 40px;
 }
 
 .xlarge-font {
-  font-size: 64px
+  font-size: 65px
 }
 
 .button {
   border: none;
   color: white;
-  padding: 14px 28px;
-  font-size: 16px;
+  // padding: 14px 28px;
+  font-size: 12px;
   cursor: pointer;
   background-color: #4CAF50;
+  border-radius: 5%;
 }
 
 img {
   display: block;
   height: auto;
   max-width: 100%;
+  border-radius: 1%;
 }
 
 @media screen and (max-width: 1000px) {
