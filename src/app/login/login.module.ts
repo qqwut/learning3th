@@ -5,6 +5,8 @@ import { LoginRoutingModule } from './login-routing.module';
 import { LoginComponent } from './login/login.component';
 import { ButtonModule } from 'primeng/button';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TabViewModule } from 'primeng/tabview';
+import { InputTextModule } from 'primeng/inputtext';
 
 @NgModule({
   declarations: [LoginComponent],
@@ -14,7 +16,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ButtonModule,
     SharedModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    TabViewModule,
+    InputTextModule
   ]
 })
 

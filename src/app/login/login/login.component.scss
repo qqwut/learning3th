@@ -1,34 +1,53 @@
 .login {
-  // border: solid #888 1px;
   box-shadow: 7px 3px 67px 16px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
-  border-radius: 20px;
-  width: 550px;
+  background-color: #3d5983;
+  //   border-radius: 20px;
+  width: 1000px;
   margin: auto;
-  margin-top: 30vh;
-  padding: 5% 8% 5% 8%;
+  //   margin-top: 30vh;
+  padding: 2% 2% 2% 2%;
+
+  input {
+  }
 
   input {
     width: 100%;
-    margin: 10px;
-    border-radius: 10px !important;
+    color: #fff;
+    // margin: 10px;
+    // border-radius: 10px !important;
   }
 
   button {
     width: 100%;
     margin: 10px;
-    border-radius: 10px !important;
+    // border-radius: 10px !important;
     height: 35px;
     padding: 6px;
   }
 }
 
 .bg {
-  // background-image: url(/assets/img/banner.jpg);
-  // height: 120px;
-  padding-top: calc(20px);
+  //   padding-top: calc(20px);
+  //   width: 100%;
+  //   background-position: center;
+  //   background-repeat: no-repeat;
+  //   background-size: cover;
+  padding-top: 30vh;
   width: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  height: 100vh;
+  //   margin: 0 auto;
+  background-image: -moz-linear-gradient(136deg, rgb(0, 158, 253) 0%, rgb(42, 245, 152) 100%);
+  background-image: -webkit-linear-gradient(136deg, rgb(0, 158, 253) 0%, rgb(42, 245, 152) 100%);
+}
+
+input {
+  border-radius: 0px !important;
+  border-top-style: hidden;
+  border-left-style: hidden;
+  border-right-style: hidden;
+  width: 100% !important;
+
+  ::placeholder {
+    color: #fff;
+  }
 }

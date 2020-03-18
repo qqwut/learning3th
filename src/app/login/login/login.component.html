@@ -1,7 +1,43 @@
-<div class="bg">
+<!-- <div class="bg">
     <div class="login">
         <input type="text" id="user" placeholder="user" [(ngModel)]="user">
         <input type="password" id="password" placeholder="password" [(ngModel)]="password">
         <button pButton class="btn" (click)="login()">login</button>
+    </div>
+</div> -->
+<div class="bg">
+    <div class="login" style="padding-top: 30px;">
+        <div class="ui-g">
+            <div class="ui-g-12">
+                <div class="ui-g-6">
+                    <img src="/assets/img/4000UChip.jpg" style="width: 100%;" alt="">
+                </div>
+                <div class="ui-g-6">
+                    <div class="ui-g-12">
+                        <div class="ui-g-6" style="cursor: pointer;color: #FFF;">
+                            <h5>เข้าสู่ระบบ</h5>
+                        </div>
+                        <div class="ui-g-6" style="cursor: pointer;color: #FFF;">
+                            <h5>สมัครสมาชิก</h5>
+                        </div>
+                    </div>
+                    <div class="ui-g-12">
+                        <span class="ui-float-label">
+                            <input id="float-input" type="text" size="30" pInputText>
+                            <label for="float-input">Username</label>
+                        </span>
+                    </div>
+                    <div class="ui-g-12">
+                        <span class="ui-float-label">
+                            <input id="float-input" type="password" size="30" pInputText>
+                            <label for="float-input">Password</label>
+                        </span>
+                    </div>
+                    <div class="ui-g-12">
+                        <button pButton class="btn" (click)="login()">login</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
