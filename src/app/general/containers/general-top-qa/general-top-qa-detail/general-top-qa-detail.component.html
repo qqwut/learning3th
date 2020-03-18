@@ -1,5 +1,50 @@
-<div class="content">
-    <p>general-top-qa-detail works!</p>
-    
-</div>
+<div class="ui-g-12" style="padding-left: 3%;padding-right: 3%;">
+    <div style="margin-bottom: 20px;">
+        <br>
+    </div>
 
+    <div class="ui-g-12 card-content">
+        <div class="ui-g-1">
+            <img src="../assets/img/cat1.jpg" class="avatar" style="width:80px; height:80px; border-radius: 50%;">
+        </div>
+        <div class="ui-g-11">
+            <span style="font-size:24px; color: blue; "><b>chromedriver คืออะไร?</b></span><br>
+            <span>เวลาที่เรา Run Robot Framework Script เพื่อทำการทดสอบระบบ ตัว Script ก็จะเรียกใช้ Browser แค่ FireFox
+              เพียงอย่างเดียว
+              ทีนี้ ถ้าต้องการทดสอบบน Browser ตัวอื่นๆ ต้องลง Driver ของ browser ตัวอื่นๆในเครื่องของเราด้วยนะจ้ะ เพื่อ
+              ที่ Robot Framework Script จะได้ทำงานได้
+              ยกตัวอย่าง จะใช้ Google Chrome เป็น Browser ในการทดสอบ ก็ต้องลง ChromeDriver นั่นเอง</span>
+        </div>
+    </div>
+    <br>
+
+    <div class="ui-g-12 card-content" style="margin-left: 10%; width: 90%;">
+        <div class="ui-g-1">
+            <img src="../assets/img/cat2.jpg" class="w3-bar-item w3-circle w3-hide-small " style="width:80px; height:80px; border-radius: 50%;">
+        </div>
+        <div class="ui-g-11">
+            <span>
+                    วิธีติดตั้ง Chromedriver เพื่อใช้งาน บนเครื่อง Windows
+                    Download ChromeDriver จาก ที่นี่ (ในตอนนี้จะเป็น Version 2.15)
+                    เมื่อ Download เสร็จสิ้นจะได้ไฟล์ chromedriver_win32.zip > unzip ได้ Folder chromedriver_win32
+                    Screen Shot 2558-05-12 at 1.45.30 PM
+                    เข้าไปข้างใน Folder chromedriver_win32 จะเห็นว่ามี File : chromedriver อยู่ใน Folder นี้ เปิด Folder นี้ทิ้งไว้
+                    ไปที่ Folder ที่เราลง Google Chrome ไว้ เช่น C:\Program Files\Google\Chrome\Application
+                    จัดการ ลาก chromedriver จาก Folder chromedriver_win32 มาที่ Folder ที่เราลง Google Chrome ไว้ เช่น C:\Program Files\Google\Chrome\Application
+                    Screen Shot 2558-05-12 at 1.49.16 PM
+                    จะมี pop up ถามหา permission ในส่วนนี้สามารถกด continue ได้เลย
+                    Screen Shot 2558-05-12 at 1.49.46 PM
+                    คอมพิวเตอร์บางเครื่องอาจจะถามหา Password มี Pop Up ให้ใส่ Password ก็ใส่ลงไปเพื่อยืนยัน Permission การติดตั้ง ChromeDriver
+                    หลังจากทำขั้นตอนนี้ให้สั่ง Restart Computer เมื่อกลับมาให้ไปทำการ Setup Path chromedriver ตามขั้นตอนข้างล่างค่ะ
+            </span>
+        </div>
+    </div>
+    <br>
+    <div class="ui-g-12" style="margin-top: 85px;">
+        <angular-editor [placeholder]="'Enter text here...'" [(ngModel)]="htmlEditor" [config]="editorConfig">
+        </angular-editor>
+    </div>
+    <br>
+    <br>
+    <button type="button" class="btn-primary">ย้อนกลับ</button>
+</div>

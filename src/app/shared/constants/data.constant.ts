@@ -5,19 +5,16 @@ export var MENU_ADMIN = [
         }
     },
     {
-        label: 'Learning'
-    },
-    {
         label: 'SeleniumLibrary',
         items: [
             {
                 label: 'Open Browser'
             },
             {
-                label: 'Open Browser2'
+                label: 'Input Text'
             },
             {
-                label: 'Open Browser3'
+                label: 'Click Button'
             }
         ]
     },
@@ -32,7 +29,7 @@ export var MENU_ADMIN = [
                 routerLink: '/admin/run-keyword-if'
             },
             {
-                label: 'Other'
+                label: 'Get Time'
             }
         ]
     },
@@ -49,19 +46,16 @@ export var MENU_GENERAL = [
         }
     },
     {
-        label: 'Learning'
-    },
-    {
         label: 'SeleniumLibrary',
         items: [
             {
                 label: 'Open Browser'
             },
             {
-                label: 'Open Browser2'
+                label: 'Input Text'
             },
             {
-                label: 'Open Browser3'
+                label: 'Click Button'
             }
         ]
     },
@@ -76,7 +70,7 @@ export var MENU_GENERAL = [
                 routerLink: '/general/run-keyword-if'
             },
             {
-                label: 'Other'
+                label: 'Get Time'
             }
         ]
     },
