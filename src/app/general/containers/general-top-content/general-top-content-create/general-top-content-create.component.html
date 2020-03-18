@@ -1,27 +1,42 @@
-<div class="ui-g-12">
-    <angular-editor [placeholder]="'Enter text here...'" [(ngModel)]="htmlEditor" [config]="editorConfig">
-    </angular-editor>
-</div>
-<div class="ui-g-12">
-    <div class="ui-g-2">แนบเอกสาร</div>
-    <div class="ui-g-10">
-        <button pButton style="width:110px;text-align: -webkit-center;" type="button" label="อัพโหลด"
+<div class="ui-g-12" style="margin:30px;">
+
+    <div class="ui-g-12">
+        <div style="margin-bottom: 20px;">
+            <h2>เพิ่มบทความ</h2>
+            <hr class="hr">
+        </div>
+        <div class="ui-g-12">
+            <angular-editor [placeholder]="'Enter text here...'" [(ngModel)]="htmlEditor" [config]="editorConfig">
+            </angular-editor>
+        </div>
+    </div>
+    <div class="ui-g-12">
+        <div class="ui-g-2">แนบเอกสาร</div>
+        <div class="ui-g-10">
+            <button pButton style="width:110px;text-align: -webkit-center;" type="button" label="อัพโหลด"
+                class="ui-button-rounded">
+            </button>
+        </div>
+    </div>
+    <div class="ui-g-12">
+        <div class="ui-g-4">
+            <span>
+                <p-radioButton name="groupname" value="val1"></p-radioButton>
+            </span>
+            <span style="margin-left: 20px;">บันทึกฉบับร่าง</span>
+        </div>
+        <div class="ui-g-4">
+            <span>
+                <p-radioButton name="groupname" value="val1"></p-radioButton>
+            </span>
+            <span style="margin-left: 20px;">เผยแพร่</span>
+        </div>
+        <div class="ui-g-4"></div>
+    </div>
+    <div class="ui-g-12">
+        <button pButton style="width:200px;text-align: -webkit-center;" type="button" label="สร้างบทความ"
             class="ui-button-rounded">
         </button>
     </div>
-</div>
-<div class="ui-g-12">
-    <div class="ui-g-4">
-        <span><p-radioButton name="groupname" value="val1"></p-radioButton></span>
-        <span style="margin-left: 20px;">บันทึกฉบับร่าง</span>
-    </div>
-    <div class="ui-g-4">
-        <span><p-radioButton name="groupname" value="val1"></p-radioButton></span>
-        <span style="margin-left: 20px;">เผยแพร่</span>
-    </div>
-    <div class="ui-g-4"></div>
-</div>
-<div class="ui-g-12">
-    <button pButton style="width:200px;text-align: -webkit-center;" type="button" label="สร้างบทความ" class="ui-button-rounded">
-</button>
+
 </div>

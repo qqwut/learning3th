@@ -7,6 +7,7 @@ import { ButtonModule } from 'primeng/button';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TabViewModule } from 'primeng/tabview';
 import { InputTextModule } from 'primeng/inputtext';
+import { RadioButtonModule } from 'primeng/radiobutton';
 
 @NgModule({
   declarations: [LoginComponent],
@@ -18,7 +19,8 @@ import { InputTextModule } from 'primeng/inputtext';
     FormsModule,
     ReactiveFormsModule,
     TabViewModule,
-    InputTextModule
+    InputTextModule,
+    RadioButtonModule
   ]
 })
 

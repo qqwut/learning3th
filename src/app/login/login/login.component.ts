@@ -22,6 +22,11 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
     this.user = 'general';
     this.transactionData = this.transactionService.load();
+    this.transactionData.url = "";
+    this.transactionData.customer = null;
+    this.transactionData.transactionId = "";
+    this.transactionData.role = "";
+    this.transactionService.update(this.transactionData);
   }
 
   login() {
@@ -35,7 +40,8 @@ export class LoginComponent implements OnInit {
       };
 
     } else if (type && type.toLocaleLowerCase() == 'general') {
-      this.router.navigate(['/general/content/by-user']);
+      // this.router.navigate(['/general/content/by-user']);
+      this.router.navigate(['/general']);
       this.transactionData.role = 'general';
       this.transactionData.customer = {
         id: 'G0001',

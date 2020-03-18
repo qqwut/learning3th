@@ -1,8 +1,7 @@
 export var MENU_ADMIN = [
     {
         label: 'HOME',
-        command: (event: any) => {
-        }
+        routerLink: '/admin'
     },
     {
         label: 'SeleniumLibrary',
@@ -42,8 +41,7 @@ export var MENU_ADMIN = [
 export var MENU_GENERAL = [
     {
         label: 'HOME',
-        command: (event: any) => {
-        }
+        routerLink: '/general'
     },
     {
         label: 'SeleniumLibrary',

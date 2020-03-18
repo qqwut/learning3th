@@ -12,14 +12,22 @@
             <div class="ui-g-10 ui-lg-3 ui-md-6 ui-xs-6 hi">
                 <div class="ui-g-8 pd-top" style="text-align: right;">
                     <!-- <div class="menu-user"><b>Register | Sign In</b></div> -->
-                    <div>{{transactionData?.customer?.name}}</div>
+                    <div [routerLink]="['/login']" syle="cursor:pointer;" *ngIf="!transactionData.customer"
+                        class="menu-user"><b> Register | Sign In</b></div>
+                    <div *ngIf="transactionData && transactionData.customer">{{transactionData?.customer?.name}}</div>
                 </div>
                 <div class="ui-g-4 pd-top">
                     <!-- <div class="img-circle"> -->
-                    <p-menu [style]="{'line-height': '15px','border-radius':'10px !important'}" #menu [popup]="true" [model]="items"></p-menu>
-                        <!-- <span (click)="menu.toggle($event)" style="padding: 2px;"><i class="pi pi-user"></i></span> -->
-                        <img style="width: 50px; border-radius: 50%" src="https://miro.medium.com/fit/c/96/96/0*fgn9C09BakRzpzv_" alt="Kachain Anuritpraseart" >
-                        <span (click)="menu.toggle($event)" style="position: absolute;font-size: 25px;color: #888;cursor: pointer;margin-left: 13px;"><i class="pi pi-list"></i></span>
+                    <p-menu [style]="{'line-height': '15px','border-radius':'10px !important'}" #menu [popup]="true"
+                        [model]="items"></p-menu>
+                    <!-- <span (click)="menu.toggle($event)" style="padding: 2px;"><i class="pi pi-user"></i></span> -->
+                    <img *ngIf="!transactionData.customer" style="width: 50px;" src="/assets/img/user-icon-logo-7.png"
+                        alt="">
+                    <img *ngIf="transactionData.customer" style="width: 50px; border-radius: 50%"
+                        src="https://miro.medium.com/fit/c/96/96/0*fgn9C09BakRzpzv_" alt="Kachain Anuritpraseart">
+                    <span *ngIf="transactionData.customer" (click)="menu.toggle($event)"
+                        style="position: absolute;font-size: 25px;color: #888;cursor: pointer;margin-left: 13px;"><i
+                            class="pi pi-list"></i></span>
                     <!-- </div> -->
                 </div>
             </div>
@@ -27,8 +35,7 @@
             <div class="ui-g w-screen">
                 <div class="menu-list" style="width:100%;text-align: center;padding:0px;">
                     <div class="ui-g-3" style="padding:0px;" routerLink="/general/content">
-                        <div class="menu-ac"
-                            [ngClass]="{ 
+                        <div class="menu-ac" [ngClass]="{ 
                                 'menu-ac-active': (
                                     routerCurrent == '/general/content/list' || 
                                     routerCurrent == '/general/content/detail/1' || 
@@ -38,14 +45,12 @@
                         </div>
                     </div>
                     <div class="ui-g-3" style="padding:0px;" routerLink="/general/qa">
-                        <div class="menu-ac"
-                            [ngClass]="{ 'menu-ac-active': routerCurrent == '/general/qa/list' }">
+                        <div class="menu-ac" [ngClass]="{ 'menu-ac-active': routerCurrent == '/general/qa/list' }">
                             <span class="menu-li">&nbsp;Q&A</span>
                         </div>
                     </div>
                     <div class="ui-g-3" style="padding:0px;" routerLink="/general/news">
-                        <div class="menu-ac"
-                            [ngClass]="{ 'menu-ac-active': routerCurrent == '/general/news/list' }">
+                        <div class="menu-ac" [ngClass]="{ 'menu-ac-active': routerCurrent == '/general/news/list' }">
                             <span class="menu-li">&nbsp;ข่าวสาร</span>
                         </div>
                     </div>
@@ -63,7 +68,10 @@
     <div class="ui-g">
         <div class="side-nav">
             <div class="logo">
-                <h1 style="margin-top: 0px;padding-top: 19px;color: #FFF;">Learnning3thai</h1>
+                <div style="width: 208px;">
+                    <img style="width: 100%;" src="/assets/img/logol3th.png" alt="">
+                </div>
+                <!-- <h1 style="margin-top: 0px;padding-top: 19px;color: #FFF;">Learnning3thai</h1> -->
                 <hr>
             </div>
             <div class="menu-left">

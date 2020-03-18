@@ -31,7 +31,7 @@ export class DashboardComponent implements OnInit {
     this.menuBar = MENU_GENERAL;
     this.items = MENU_USER;
     this.currentUser = this.authenticationService.currentUserValue;
-
+    this.transactionData = this.transactionService.load();
     setInterval(() => {
       this.routerCurrent = this.router.url;
     }, 100);
