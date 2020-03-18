@@ -12,6 +12,7 @@ export class LoginComponent implements OnInit {
   transactionData: TransactionData;
   user: string;
   password: string;
+  register: boolean = false;
 
   constructor(
     private router: Router,
