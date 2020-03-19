@@ -13,7 +13,7 @@
                 <div class="ui-g-8 pd-top" style="text-align: right;">
                     <!-- <div class="menu-user"><b>Register | Sign In</b></div> -->
                     <div [routerLink]="['/login']" syle="cursor:pointer;" *ngIf="!transactionData.customer"
-                        class="menu-user"><b> Register | Sign In</b></div>
+                        class="menu-user"><b style="font-size: 12px;"> Register | Sign In</b></div>
                     <div *ngIf="transactionData && transactionData.customer">{{transactionData?.customer?.name}}</div>
                 </div>
                 <div class="ui-g-4 pd-top">
@@ -46,12 +46,12 @@
                     </div>
                     <div class="ui-g-3" style="padding:0px;" routerLink="/general/qa">
                         <div class="menu-ac" [ngClass]="{ 'menu-ac-active': routerCurrent == '/general/qa/list' }">
-                            <span class="menu-li">&nbsp;Q&A</span>
+                            <span class="menu-li">&nbsp;ถาม-ตอบ</span>
                         </div>
                     </div>
                     <div class="ui-g-3" style="padding:0px;" routerLink="/general/news">
                         <div class="menu-ac" [ngClass]="{ 'menu-ac-active': routerCurrent == '/general/news/list' }">
-                            <span class="menu-li">&nbsp;ข่าวสาร</span>
+                            <span class="menu-li">&nbsp;วิดีโอ</span>
                         </div>
                     </div>
                     <div class="ui-g-3" style="padding:0px;" routerLink="/general/activity">
